@@ -152,21 +152,17 @@
 <div class="genindex-jumpbox">
  <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
- | <a href="#E"><strong>E</strong></a>
+ | <a href="#D"><strong>D</strong></a>
  | <a href="#G"><strong>G</strong></a>
- | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
  | <a href="#P"><strong>P</strong></a>
- | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
- | <a href="#T"><strong>T</strong></a>
- | <a href="#W"><strong>W</strong></a>
- | <a href="#Z"><strong>Z</strong></a>
  
 </div>
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData">BuildingData (class in cobmo.database_interface)</a>
+      <li><a href="api.html#cobmo.building.Building">Building (class in cobmo.building)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -174,13 +170,7 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.utils.calculate_absolute_humidity_humid_air">calculate_absolute_humidity_humid_air() (in module cobmo.utils)</a>
-</li>
-      <li><a href="api.html#cobmo.utils.calculate_dew_point_enthalpy_humid_air">calculate_dew_point_enthalpy_humid_air() (in module cobmo.utils)</a>
-</li>
       <li><a href="api.html#cobmo.utils.calculate_discounted_payback_time">calculate_discounted_payback_time() (in module cobmo.utils)</a>
-</li>
-      <li><a href="api.html#cobmo.utils.calculate_enthalpy_humid_air">calculate_enthalpy_humid_air() (in module cobmo.utils)</a>
 </li>
       <li><a href="api.html#cobmo.utils.calculate_error">calculate_error() (in module cobmo.utils)</a>
 </li>
@@ -188,11 +178,15 @@
 </li>
       <li><a href="api.html#cobmo.utils.calculate_sky_temperature">calculate_sky_temperature() (in module cobmo.utils)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api.html#cobmo.utils.calculate_tank_diameter_height">calculate_tank_diameter_height() (in module cobmo.utils)</a>
 </li>
+      <li><a href="api.html#module-cobmo.building">cobmo.building (module)</a>
+</li>
       <li><a href="api.html#module-cobmo.config">cobmo.config (module)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#module-cobmo.controller">cobmo.controller (module)</a>
 </li>
       <li><a href="api.html#module-cobmo.database_interface">cobmo.database_interface (module)</a>
 </li>
@@ -202,15 +196,77 @@
 </li>
       <li><a href="api.html#cobmo.database_interface.connect_database">connect_database() (in module cobmo.database_interface)</a>
 </li>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.constraint_timeseries">constraint_timeseries (cobmo.database_interface.BuildingData attribute)</a>
+      <li><a href="api.html#cobmo.controller.Controller">Controller (class in cobmo.controller)</a>
+</li>
+      <li><a href="api.html#cobmo.database_interface.create_database">create_database() (in module cobmo.database_interface)</a>
 </li>
   </ul></td>
 </tr></table>
 
-<h2 id="E">E</h2>
+<h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.electricity_price_timeseries">electricity_price_timeseries (cobmo.database_interface.BuildingData attribute)</a>
+      <li><a href="api.html#cobmo.building.Building.define_augmented_model">define_augmented_model() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_co2_transfer_hvac_ahu">define_co2_transfer_hvac_ahu() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_coefficients">define_heat_transfer_coefficients() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_hvac_ahu">define_heat_transfer_hvac_ahu() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_hvac_generic">define_heat_transfer_hvac_generic() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_hvac_tu">define_heat_transfer_hvac_tu() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_infiltration">define_heat_transfer_infiltration() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_internal_gains">define_heat_transfer_internal_gains() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_surfaces_adiabatic">define_heat_transfer_surfaces_adiabatic() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_surfaces_exterior">define_heat_transfer_surfaces_exterior() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_surfaces_interior">define_heat_transfer_surfaces_interior() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_heat_transfer_window_air_flow">define_heat_transfer_window_air_flow() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_humidity_transfer_hvac_ahu">define_humidity_transfer_hvac_ahu() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_ahu_fresh_air_flow">define_output_ahu_fresh_air_flow() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_constraint_timeseries">define_output_constraint_timeseries() (cobmo.building.Building method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#cobmo.building.Building.define_output_fresh_air_flow">define_output_fresh_air_flow() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_hvac_ahu_electric_power">define_output_hvac_ahu_electric_power() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_hvac_generic_power">define_output_hvac_generic_power() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_hvac_tu_electric_power">define_output_hvac_tu_electric_power() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_storage_charge">define_output_storage_charge() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_storage_discharge">define_output_storage_discharge() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_storage_state_of_charge">define_output_storage_state_of_charge() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_surfaces_exterior_convection_interior">define_output_surfaces_exterior_convection_interior() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_surfaces_exterior_irradiation_gain_exterior">define_output_surfaces_exterior_irradiation_gain_exterior() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_window_fresh_air_flow">define_output_window_fresh_air_flow() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_zone_co2_concentration">define_output_zone_co2_concentration() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_zone_humidity">define_output_zone_humidity() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_output_zone_temperature">define_output_zone_temperature() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.define_storage_state_of_charge">define_storage_state_of_charge() (cobmo.building.Building method)</a>
+</li>
+      <li><a href="api.html#cobmo.building.Building.discretize_model">discretize_model() (cobmo.building.Building method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -227,10 +283,10 @@
   </ul></td>
 </tr></table>
 
-<h2 id="I">I</h2>
+<h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.internal_gain_timeseries">internal_gain_timeseries (cobmo.database_interface.BuildingData attribute)</a>
+      <li><a href="api.html#cobmo.building.Building.load_disturbance_timeseries">load_disturbance_timeseries() (cobmo.building.Building method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -238,7 +294,7 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.parameters">parameters (cobmo.database_interface.BuildingData attribute)</a>
+      <li><a href="api.html#cobmo.building.Building.parse_parameter">parse_parameter() (cobmo.building.Building method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -249,58 +305,16 @@
   </ul></td>
 </tr></table>
 
-<h2 id="R">R</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.recreate_database">recreate_database() (in module cobmo.database_interface)</a>
-</li>
-  </ul></td>
-</tr></table>
-
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.scenarios">scenarios (cobmo.database_interface.BuildingData attribute)</a>
-</li>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.surfaces_adiabatic">surfaces_adiabatic (cobmo.database_interface.BuildingData attribute)</a>
+      <li><a href="api.html#cobmo.building.Building.scenario_name">scenario_name (cobmo.building.Building attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.surfaces_exterior">surfaces_exterior (cobmo.database_interface.BuildingData attribute)</a>
+      <li><a href="api.html#cobmo.building.Building.simulate">simulate() (cobmo.building.Building method)</a>
 </li>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.surfaces_interior">surfaces_interior (cobmo.database_interface.BuildingData attribute)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="T">T</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.timestep_delta">timestep_delta (cobmo.database_interface.BuildingData attribute)</a>
-</li>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.timestep_end">timestep_end (cobmo.database_interface.BuildingData attribute)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.timestep_start">timestep_start (cobmo.database_interface.BuildingData attribute)</a>
-</li>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.timesteps">timesteps (cobmo.database_interface.BuildingData attribute)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="W">W</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.weather_timeseries">weather_timeseries (cobmo.database_interface.BuildingData attribute)</a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="Z">Z</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#cobmo.database_interface.BuildingData.zones">zones (cobmo.database_interface.BuildingData attribute)</a>
+      <li><a href="api.html#cobmo.controller.Controller.solve">solve() (cobmo.controller.Controller method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -317,7 +331,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, TUMCREATE
+        &copy; Copyright 2018-2020, TUMCREATE
 
     </p>
   </div>
@@ -332,7 +346,29 @@
 
   </div>
   
-
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Other Versions</span>
+    v: 0.3.0
+    <span class="fa fa-caret-down"></span>
+  </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../0.2.0/index.html">0.2.0</a></dd>
+            <dd><a href="genindex.html">0.3.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../develop/index.html">develop</a></dd>
+            <dd><a href="../feature/bidding_strategy/index.html">feature/bidding_strategy</a></dd>
+            <dd><a href="../feature/building_archetypes_2/index.html">feature/building_archetypes_2</a></dd>
+            <dd><a href="../feature/create_tower_revision/index.html">feature/create_tower_revision</a></dd>
+            <dd><a href="../feature/districtcooling/index.html">feature/districtcooling</a></dd>
+            <dd><a href="../master/index.html">master</a></dd>
+        </dl>
+    </div>
+</div>
 
   <script type="text/javascript">
       jQuery(function () {

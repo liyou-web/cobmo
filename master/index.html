@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CoBMo - Control-oriented Building Model &mdash; CoBMo  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> CoBMo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">CoBMo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>CoBMo - Control-oriented Building Model</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cobmo-control-oriented-building-model">
+<h1>CoBMo - Control-oriented Building Model<a class="headerlink" href="#cobmo-control-oriented-building-model" title="Permalink to this headline">¶</a></h1>
+<p>The Control-oriented Building Model (CoBMo) is a building modelling framework catering specifically for the formulation of MPC problems for thermal building systems by keeping all model equations in the linear, i.e., convex, domain. CoBMo provides a mathematical model which expresses the relationship between the electric load of the thermal building systems and the indoor air climate with consideration for interactions of the building with its environment, its occupants and appliances. To this end, CoBMo currently implements models for 1) the thermal comfort of building occupants as well as 2) the indoor air quality.</p>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#papers">Papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#contributing">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cobmo.building"><code class="docutils literal notranslate"><span class="pre">cobmo.building</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cobmo.config"><code class="docutils literal notranslate"><span class="pre">cobmo.config</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cobmo.controller"><code class="docutils literal notranslate"><span class="pre">cobmo.controller</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cobmo.database_interface"><code class="docutils literal notranslate"><span class="pre">cobmo.database_interface</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cobmo.plots"><code class="docutils literal notranslate"><span class="pre">cobmo.plots</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-cobmo.utils"><code class="docutils literal notranslate"><span class="pre">cobmo.utils</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-blind-types"><code class="docutils literal notranslate"><span class="pre">building_blind_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-hvac-ahu-types"><code class="docutils literal notranslate"><span class="pre">building_hvac_ahu_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-hvac-generic-types"><code class="docutils literal notranslate"><span class="pre">building_hvac_generic_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-hvac-tu-types"><code class="docutils literal notranslate"><span class="pre">building_hvac_tu_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-internal-gain-timeseries"><code class="docutils literal notranslate"><span class="pre">building_internal_gain_timeseries</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-internal-gain-types"><code class="docutils literal notranslate"><span class="pre">building_internal_gain_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-linearization-types"><code class="docutils literal notranslate"><span class="pre">building_linearization_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-parameter-sets"><code class="docutils literal notranslate"><span class="pre">building_parameter_sets</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-scenarios"><code class="docutils literal notranslate"><span class="pre">building_scenarios</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-storage-types"><code class="docutils literal notranslate"><span class="pre">building_storage_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-surface-types"><code class="docutils literal notranslate"><span class="pre">building_surface_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-surfaces-adiabatic"><code class="docutils literal notranslate"><span class="pre">building_surfaces_adiabatic</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-surfaces-exterior"><code class="docutils literal notranslate"><span class="pre">building_surfaces_exterior</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-surfaces-interior"><code class="docutils literal notranslate"><span class="pre">building_surfaces_interior</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-window-types"><code class="docutils literal notranslate"><span class="pre">building_window_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-zone-constraint-profiles"><code class="docutils literal notranslate"><span class="pre">building_zone_constraint_profiles</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-zone-types"><code class="docutils literal notranslate"><span class="pre">building_zone_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#building-zones"><code class="docutils literal notranslate"><span class="pre">building_zones</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#buildings"><code class="docutils literal notranslate"><span class="pre">buildings</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#electricity-price-timeseries"><code class="docutils literal notranslate"><span class="pre">electricity_price_timeseries</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#weather-timeseries"><code class="docutils literal notranslate"><span class="pre">weather_timeseries</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#weather-types"><code class="docutils literal notranslate"><span class="pre">weather_types</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#git-branches">Git branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#release-versioning">Release versioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#style-guide">Style guide</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="intro.html" class="btn btn-neutral float-right" title="Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2020, TUMCREATE
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Other Versions</span>
+    v: master
+    <span class="fa fa-caret-down"></span>
+  </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../0.2.0/index.html">0.2.0</a></dd>
+            <dd><a href="../0.3.0/index.html">0.3.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../develop/index.html">develop</a></dd>
+            <dd><a href="../feature/bidding_strategy/index.html">feature/bidding_strategy</a></dd>
+            <dd><a href="../feature/building_archetypes_2/index.html">feature/building_archetypes_2</a></dd>
+            <dd><a href="../feature/create_tower_revision/index.html">feature/create_tower_revision</a></dd>
+            <dd><a href="../feature/districtcooling/index.html">feature/districtcooling</a></dd>
+            <dd><a href="index.html">master</a></dd>
+        </dl>
+    </div>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

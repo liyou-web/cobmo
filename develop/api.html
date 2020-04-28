@@ -84,9 +84,9 @@
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference external" href="./_static/technical_documentation.pdf#http://">Technical documentation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-cobmo.building_model"><code class="docutils literal notranslate"><span class="pre">cobmo.building_model</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cobmo-building-model"><code class="docutils literal notranslate"><span class="pre">cobmo.building_model</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-cobmo.config"><code class="docutils literal notranslate"><span class="pre">cobmo.config</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-cobmo.optimization_problem"><code class="docutils literal notranslate"><span class="pre">cobmo.optimization_problem</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cobmo-optimization-problem"><code class="docutils literal notranslate"><span class="pre">cobmo.optimization_problem</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-cobmo.database_interface"><code class="docutils literal notranslate"><span class="pre">cobmo.database_interface</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-cobmo.plots"><code class="docutils literal notranslate"><span class="pre">cobmo.plots</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-cobmo.utils"><code class="docutils literal notranslate"><span class="pre">cobmo.utils</span></code></a></li>
@@ -164,122 +164,8 @@
 <p class="admonition-title">Warning</p>
 <p>This reference is work in progress.</p>
 </div>
-<div class="section" id="module-cobmo.building_model">
-<span id="cobmo-building-model"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.building_model</span></code><a class="headerlink" href="#module-cobmo.building_model" title="Permalink to this headline">¶</a></h2>
-<p>Building model module.</p>
-<dl class="class">
-<dt id="cobmo.building_model.BuildingModel">
-<em class="property">class </em><code class="sig-prename descclassname">cobmo.building_model.</code><code class="sig-name descname">BuildingModel</code><a class="headerlink" href="#cobmo.building_model.BuildingModel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Building model object.</p>
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.building_data">
-<code class="sig-name descname">building_data</code><em class="property">: cobmo.database_interface.BuildingData</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.building_data" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.control_matrix">
-<code class="sig-name descname">control_matrix</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.control_matrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.control_output_matrix">
-<code class="sig-name descname">control_output_matrix</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.control_output_matrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.controls">
-<code class="sig-name descname">controls</code><em class="property">: pd.Index</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.controls" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.disturbance_matrix">
-<code class="sig-name descname">disturbance_matrix</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.disturbance_matrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.disturbance_output_matrix">
-<code class="sig-name descname">disturbance_output_matrix</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.disturbance_output_matrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.disturbance_timeseries">
-<code class="sig-name descname">disturbance_timeseries</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.disturbance_timeseries" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.disturbances">
-<code class="sig-name descname">disturbances</code><em class="property">: pd.Index</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.disturbances" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.electricity_price_timeseries">
-<code class="sig-name descname">electricity_price_timeseries</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.electricity_price_timeseries" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.output_constraint_timeseries_maximum">
-<code class="sig-name descname">output_constraint_timeseries_maximum</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.output_constraint_timeseries_maximum" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.output_constraint_timeseries_minimum">
-<code class="sig-name descname">output_constraint_timeseries_minimum</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.output_constraint_timeseries_minimum" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.outputs">
-<code class="sig-name descname">outputs</code><em class="property">: pd.Index</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.outputs" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.scenario_name">
-<code class="sig-name descname">scenario_name</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.scenario_name" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="cobmo.building_model.BuildingModel.simulate">
-<code class="sig-name descname">simulate</code><span class="sig-paren">(</span><em class="sig-param">state_initial</em>, <em class="sig-param">control_vector</em>, <em class="sig-param">disturbance_timeseries=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building_model.BuildingModel.simulate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Simulate building model with given initial state and control timeseries.</p>
-<ul class="simple">
-<li>Time horizon is derived from scenario definition in database.</li>
-<li>Disturbance timeseries is derived from database.</li>
-<li>TODO: Automatically create initial state from database.</li>
-</ul>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.state_matrix">
-<code class="sig-name descname">state_matrix</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.state_matrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.state_output_matrix">
-<code class="sig-name descname">state_output_matrix</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.state_output_matrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.state_vector_initial">
-<code class="sig-name descname">state_vector_initial</code><em class="property">: pd.Series</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.state_vector_initial" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.states">
-<code class="sig-name descname">states</code><em class="property">: pd.Index</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.states" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.timestep_delta">
-<code class="sig-name descname">timestep_delta</code><em class="property">: pd.Timedelta</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.timestep_delta" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.building_model.BuildingModel.timesteps">
-<code class="sig-name descname">timesteps</code><em class="property">: pd.Index</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.building_model.BuildingModel.timesteps" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="cobmo-building-model">
+<h2><code class="docutils literal notranslate"><span class="pre">cobmo.building_model</span></code><a class="headerlink" href="#cobmo-building-model" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-cobmo.config">
 <span id="cobmo-config"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.config</span></code><a class="headerlink" href="#module-cobmo.config" title="Permalink to this headline">¶</a></h2>
@@ -290,113 +176,22 @@
 <dd></dd></dl>
 
 </div>
-<div class="section" id="module-cobmo.optimization_problem">
-<span id="cobmo-optimization-problem"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.optimization_problem</span></code><a class="headerlink" href="#module-cobmo.optimization_problem" title="Permalink to this headline">¶</a></h2>
-<p>Optimization problem module.</p>
-<dl class="class">
-<dt id="cobmo.optimization_problem.OptimizationProblem">
-<em class="property">class </em><code class="sig-prename descclassname">cobmo.optimization_problem.</code><code class="sig-name descname">OptimizationProblem</code><span class="sig-paren">(</span><em class="sig-param">building</em>, <em class="sig-param">problem_type='operation'</em>, <em class="sig-param">output_vector_reference=None</em>, <em class="sig-param">load_reduction_start_time=None</em>, <em class="sig-param">load_reduction_end_time=None</em>, <em class="sig-param">price_sensitivity_factor=None</em>, <em class="sig-param">price_sensitivity_timestep=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.optimization_problem.OptimizationProblem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Optimization problem object.</p>
-<dl class="method">
-<dt id="cobmo.optimization_problem.OptimizationProblem.solve">
-<code class="sig-name descname">solve</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.optimization_problem.OptimizationProblem.solve" title="Permalink to this definition">¶</a></dt>
-<dd><p>Invoke solver on Pyomo problem.</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="cobmo-optimization-problem">
+<h2><code class="docutils literal notranslate"><span class="pre">cobmo.optimization_problem</span></code><a class="headerlink" href="#cobmo-optimization-problem" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-cobmo.database_interface">
 <span id="cobmo-database-interface"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.database_interface</span></code><a class="headerlink" href="#module-cobmo.database_interface" title="Permalink to this headline">¶</a></h2>
 <p>Database interface function definitions.</p>
-<dl class="class">
-<dt id="cobmo.database_interface.BuildingData">
-<em class="property">class </em><code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">BuildingData</code><a class="headerlink" href="#cobmo.database_interface.BuildingData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Building data object.</p>
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.constraint_timeseries">
-<code class="sig-name descname">constraint_timeseries</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.constraint_timeseries" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.electricity_price_timeseries">
-<code class="sig-name descname">electricity_price_timeseries</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.electricity_price_timeseries" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.internal_gain_timeseries">
-<code class="sig-name descname">internal_gain_timeseries</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.internal_gain_timeseries" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.parameters">
-<code class="sig-name descname">parameters</code><em class="property">: pd.Series</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.parameters" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.scenarios">
-<code class="sig-name descname">scenarios</code><em class="property">: pd.Series</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.scenarios" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.surfaces_adiabatic">
-<code class="sig-name descname">surfaces_adiabatic</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.surfaces_adiabatic" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.surfaces_exterior">
-<code class="sig-name descname">surfaces_exterior</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.surfaces_exterior" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.surfaces_interior">
-<code class="sig-name descname">surfaces_interior</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.surfaces_interior" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.timestep_delta">
-<code class="sig-name descname">timestep_delta</code><em class="property">: pd.Timedelta</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.timestep_delta" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.timestep_end">
-<code class="sig-name descname">timestep_end</code><em class="property">: pd.Timestamp</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.timestep_end" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.timestep_start">
-<code class="sig-name descname">timestep_start</code><em class="property">: pd.Timestamp</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.timestep_start" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.timesteps">
-<code class="sig-name descname">timesteps</code><em class="property">: pd.Index</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.timesteps" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.weather_timeseries">
-<code class="sig-name descname">weather_timeseries</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.weather_timeseries" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="cobmo.database_interface.BuildingData.zones">
-<code class="sig-name descname">zones</code><em class="property">: pd.DataFrame</em><em class="property"> = None</em><a class="headerlink" href="#cobmo.database_interface.BuildingData.zones" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 <dl class="function">
 <dt id="cobmo.database_interface.connect_database">
-<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">connect_database</code><span class="sig-paren">(</span><em class="sig-param">database_path='/home/runner/work/cobmo/cobmo/data/database.sqlite'</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.connect_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">connect_database</code><span class="sig-paren">(</span><em class="sig-param">data_path='/tmp/tmp8kwmdnq8/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/data'</em>, <em class="sig-param">overwrite_database=True</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.connect_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Connect to the database at given <cite>data_path</cite> and return connection handle.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="cobmo.database_interface.recreate_database">
-<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">recreate_database</code><span class="sig-paren">(</span><em class="sig-param">database_path='/home/runner/work/cobmo/cobmo/data/database.sqlite'</em>, <em class="sig-param">database_schema_path='/home/runner/work/cobmo/cobmo/cobmo/database_schema.sql'</em>, <em class="sig-param">data_path='/home/runner/work/cobmo/cobmo/data'</em>, <em class="sig-param">additional_data_paths=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.recreate_database" title="Permalink to this definition">¶</a></dt>
-<dd><p>Recreate SQLITE database from SQL schema file and CSV files.</p>
+<dt id="cobmo.database_interface.create_database">
+<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">create_database</code><span class="sig-paren">(</span><em class="sig-param">sqlite_path</em>, <em class="sig-param">sql_path</em>, <em class="sig-param">csv_path</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.create_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create SQLITE database from SQL schema file and CSV files.</p>
 </dd></dl>
 
 </div>
@@ -420,25 +215,10 @@
 <span id="cobmo-utils"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.utils</span></code><a class="headerlink" href="#module-cobmo.utils" title="Permalink to this headline">¶</a></h2>
 <p>Utility function definitions.</p>
 <dl class="function">
-<dt id="cobmo.utils.calculate_absolute_humidity_humid_air">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_absolute_humidity_humid_air</code><span class="sig-paren">(</span><em class="sig-param">temperature</em>, <em class="sig-param">relative_humidity</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_absolute_humidity_humid_air" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="cobmo.utils.calculate_dew_point_enthalpy_humid_air">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_dew_point_enthalpy_humid_air</code><span class="sig-paren">(</span><em class="sig-param">temperature</em>, <em class="sig-param">relative_humidity</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_dew_point_enthalpy_humid_air" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
 <dt id="cobmo.utils.calculate_discounted_payback_time">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_discounted_payback_time</code><span class="sig-paren">(</span><em class="sig-param">lifetime</em>, <em class="sig-param">investment_cost</em>, <em class="sig-param">operation_cost</em>, <em class="sig-param">operation_cost_baseline</em>, <em class="sig-param">interest_rate=0.06</em>, <em class="sig-param">investment_type=''</em>, <em class="sig-param">save_plots=False</em>, <em class="sig-param">results_path='/home/runner/work/cobmo/cobmo/results'</em>, <em class="sig-param">file_id=''</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_discounted_payback_time</code><span class="sig-paren">(</span><em class="sig-param">lifetime</em>, <em class="sig-param">investment_cost</em>, <em class="sig-param">operation_cost</em>, <em class="sig-param">operation_cost_baseline</em>, <em class="sig-param">interest_rate=0.06</em>, <em class="sig-param">investment_type=''</em>, <em class="sig-param">save_plots=False</em>, <em class="sig-param">results_path='/tmp/tmp8kwmdnq8/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/results'</em>, <em class="sig-param">file_id=''</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate simple / discounted payback time in years.</p>
 </dd></dl>
-
-<dl class="function">
-<dt id="cobmo.utils.calculate_enthalpy_humid_air">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_enthalpy_humid_air</code><span class="sig-paren">(</span><em class="sig-param">temperature</em>, <em class="sig-param">absolute_humidity</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_enthalpy_humid_air" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="function">
 <dt id="cobmo.utils.calculate_error">
@@ -451,7 +231,7 @@
 
 <dl class="function">
 <dt id="cobmo.utils.calculate_irradiation_surfaces">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_irradiation_surfaces</code><span class="sig-paren">(</span><em class="sig-param">database_connection</em>, <em class="sig-param">weather_type='singapore_nus'</em>, <em class="sig-param">irradiation_model='dirint'</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_irradiation_surfaces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_irradiation_surfaces</code><span class="sig-paren">(</span><em class="sig-param">conn</em>, <em class="sig-param">weather_type='singapore_nus'</em>, <em class="sig-param">irradiation_model='dirint'</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_irradiation_surfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates irradiation for surfaces oriented towards east, south, west &amp; north.</p>
 <ul class="simple">
 <li>Operates on the database: Updates according columns in <cite>weather_timeseries</cite>.</li>
@@ -462,7 +242,7 @@
 
 <dl class="function">
 <dt id="cobmo.utils.calculate_sky_temperature">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_sky_temperature</code><span class="sig-paren">(</span><em class="sig-param">database_connection</em>, <em class="sig-param">weather_type='singapore_nus'</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_sky_temperature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_sky_temperature</code><span class="sig-paren">(</span><em class="sig-param">conn</em>, <em class="sig-param">weather_type='singapore_nus'</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_sky_temperature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates sky temperatures from ambient air temperature for tropical weather.</p>
 <ul class="simple">
 <li>Ambient air temperature is decreased by 11K to get the sky temperature.</li>
@@ -478,7 +258,7 @@
 
 <dl class="function">
 <dt id="cobmo.utils.get_battery_parameters">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">get_battery_parameters</code><span class="sig-paren">(</span><em class="sig-param">battery_parameters_path='/home/runner/work/cobmo/cobmo/data/storage_data/battery_storage_parameters.csv'</em>, <em class="sig-param">cost_conversion_factor=1.37</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">get_battery_parameters</code><span class="sig-paren">(</span><em class="sig-param">battery_parameters_path='/tmp/tmp8kwmdnq8/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/data/storage_data/battery_storage_parameters.csv'</em>, <em class="sig-param">cost_conversion_factor=1.37</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load battery parameters from CSV, apply <cite>cost_conversion_factor</cite> to cost columns and return as dataframe.</p>
 </dd></dl>
 
@@ -505,7 +285,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, TUMCREATE
+        &copy; Copyright 2018-2020, TUMCREATE
 
     </p>
   </div>
@@ -520,7 +300,29 @@
 
   </div>
   
-
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Other Versions</span>
+    v: develop
+    <span class="fa fa-caret-down"></span>
+  </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Tags</dt>
+            <dd><a href="../0.2.0/api.html">0.2.0</a></dd>
+            <dd><a href="../0.3.0/api.html">0.3.0</a></dd>
+        </dl>
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="api.html">develop</a></dd>
+            <dd><a href="../feature/bidding_strategy/api.html">feature/bidding_strategy</a></dd>
+            <dd><a href="../feature/building_archetypes_2/api.html">feature/building_archetypes_2</a></dd>
+            <dd><a href="../feature/create_tower_revision/api.html">feature/create_tower_revision</a></dd>
+            <dd><a href="../feature/districtcooling/api.html">feature/districtcooling</a></dd>
+            <dd><a href="../master/api.html">master</a></dd>
+        </dl>
+    </div>
+</div>
 
   <script type="text/javascript">
       jQuery(function () {
