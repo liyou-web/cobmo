@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Reference &mdash; CoBMo  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="Database Reference" href="data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> CoBMo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Database Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">CoBMo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cobmo.utils">
+<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-cobmo.utils" title="Permalink to this headline">¶</a></h1>
+<p>Utility function definitions.</p>
+<dl class="function">
+<dt id="cobmo.utils.calculate_absolute_humidity_humid_air">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_absolute_humidity_humid_air</code><span class="sig-paren">(</span><em class="sig-param">temperature</em>, <em class="sig-param">relative_humidity</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_absolute_humidity_humid_air" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cobmo.utils.calculate_dew_point_enthalpy_humid_air">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_dew_point_enthalpy_humid_air</code><span class="sig-paren">(</span><em class="sig-param">temperature</em>, <em class="sig-param">relative_humidity</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_dew_point_enthalpy_humid_air" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cobmo.utils.calculate_discounted_payback_time">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_discounted_payback_time</code><span class="sig-paren">(</span><em class="sig-param">lifetime</em>, <em class="sig-param">investment_cost</em>, <em class="sig-param">operation_cost</em>, <em class="sig-param">operation_cost_baseline</em>, <em class="sig-param">interest_rate=0.06</em>, <em class="sig-param">investment_type=''</em>, <em class="sig-param">save_plots=False</em>, <em class="sig-param">results_path='/home/runner/work/cobmo/cobmo/results'</em>, <em class="sig-param">file_id=''</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate simple / discounted payback time in years.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cobmo.utils.calculate_enthalpy_humid_air">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_enthalpy_humid_air</code><span class="sig-paren">(</span><em class="sig-param">temperature</em>, <em class="sig-param">absolute_humidity</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_enthalpy_humid_air" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cobmo.utils.calculate_error">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_error</code><span class="sig-paren">(</span><em class="sig-param">expected_timeseries=Empty DataFrame Columns: [] Index: []</em>, <em class="sig-param">predicted_timeseries=Empty DataFrame Columns: [] Index: []</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the error between expected and predicted timeseries dataframes.</p>
+<ul class="simple">
+<li>Note: This function doesn’t check if the data format is valid.</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="cobmo.utils.calculate_irradiation_surfaces">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_irradiation_surfaces</code><span class="sig-paren">(</span><em class="sig-param">database_connection</em>, <em class="sig-param">weather_type='singapore_nus'</em>, <em class="sig-param">irradiation_model='dirint'</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_irradiation_surfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates irradiation for surfaces oriented towards east, south, west &amp; north.</p>
+<ul class="simple">
+<li>Operates on the database: Updates according columns in <cite>weather_timeseries</cite>.</li>
+<li>Takes irradition_horizontal as measured global horizontal irradiation (ghi).</li>
+<li>Based on pvlib-python toolbox: <a class="reference external" href="https://github.com/pvlib/pvlib-python">https://github.com/pvlib/pvlib-python</a></li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="cobmo.utils.calculate_sky_temperature">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_sky_temperature</code><span class="sig-paren">(</span><em class="sig-param">database_connection</em>, <em class="sig-param">weather_type='singapore_nus'</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_sky_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates sky temperatures from ambient air temperature for tropical weather.</p>
+<ul class="simple">
+<li>Ambient air temperature is decreased by 11K to get the sky temperature.</li>
+<li>TODO: According to ISO ???</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="cobmo.utils.calculate_tank_diameter_height">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_tank_diameter_height</code><span class="sig-paren">(</span><em class="sig-param">volume</em>, <em class="sig-param">aspect_ratio</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_tank_diameter_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates diameter and height of storage tank based on volume and aspect ratio.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cobmo.utils.get_battery_parameters">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">get_battery_parameters</code><span class="sig-paren">(</span><em class="sig-param">battery_parameters_path='/home/runner/work/cobmo/cobmo/data/storage_data/battery_storage_parameters.csv'</em>, <em class="sig-param">cost_conversion_factor=1.37</em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load battery parameters from CSV, apply <cite>cost_conversion_factor</cite> to cost columns and return as dataframe.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data.html" class="btn btn-neutral float-left" title="Database Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, TUMCREATE
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
