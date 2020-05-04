@@ -149,9 +149,216 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-cobmo.controller">
-<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-cobmo.controller" title="Permalink to this headline">¶</a></h1>
-<p>Controller class definition.</p>
+  <div class="section" id="module-cobmo.building">
+<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-cobmo.building" title="Permalink to this headline">¶</a></h1>
+<p>Building model class definition.</p>
+<dl class="py class">
+<dt id="cobmo.building.Building">
+<em class="property">class </em><code class="sig-prename descclassname">cobmo.building.</code><code class="sig-name descname">Building</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">scenario_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Building model object.</p>
+<dl class="py method">
+<dt id="cobmo.building.Building.define_augmented_model">
+<code class="sig-name descname">define_augmented_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_augmented_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define augmented state space model matrices.</p>
+<ul class="simple">
+<li>Based on Oldewurtel 2011: <a class="reference external" href="https://doi.org/10.3929/ethz-a-007157625%0A">https://doi.org/10.3929/ethz-a-007157625%0A</a></li>
+<li>Construct augmented state space matrices based on ‘normal’ state space matrices.</li>
+<li>Augmented state space matrices are stored in the build model (not returned).</li>
+<li>TODO: Validate matrices.</li>
+<li>TODO: Check alternatives for np.block(), which is slow for a large number of time steps.</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_co2_transfer_hvac_ahu">
+<code class="sig-name descname">define_co2_transfer_hvac_ahu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_co2_transfer_hvac_ahu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_coefficients">
+<code class="sig-name descname">define_heat_transfer_coefficients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_coefficients" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_hvac_ahu">
+<code class="sig-name descname">define_heat_transfer_hvac_ahu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_hvac_ahu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_hvac_generic">
+<code class="sig-name descname">define_heat_transfer_hvac_generic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_hvac_generic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_hvac_tu">
+<code class="sig-name descname">define_heat_transfer_hvac_tu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_hvac_tu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_infiltration">
+<code class="sig-name descname">define_heat_transfer_infiltration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_infiltration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_internal_gains">
+<code class="sig-name descname">define_heat_transfer_internal_gains</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_internal_gains" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_surfaces_adiabatic">
+<code class="sig-name descname">define_heat_transfer_surfaces_adiabatic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_adiabatic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thermal model: Adiabatic surfaces</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_surfaces_exterior">
+<code class="sig-name descname">define_heat_transfer_surfaces_exterior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_exterior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thermal model: Exterior surfaces</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_surfaces_interior">
+<code class="sig-name descname">define_heat_transfer_surfaces_interior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_interior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thermal model: Interior surfaces</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_heat_transfer_window_air_flow">
+<code class="sig-name descname">define_heat_transfer_window_air_flow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_window_air_flow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_humidity_transfer_hvac_ahu">
+<code class="sig-name descname">define_humidity_transfer_hvac_ahu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_humidity_transfer_hvac_ahu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_ahu_fresh_air_flow">
+<code class="sig-name descname">define_output_ahu_fresh_air_flow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_ahu_fresh_air_flow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_constraint_timeseries">
+<code class="sig-name descname">define_output_constraint_timeseries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_constraint_timeseries" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li>Generate minimum/maximum constraint timeseries based on <cite>building_zone_constraint_profiles</cite>.</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_fresh_air_flow">
+<code class="sig-name descname">define_output_fresh_air_flow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_fresh_air_flow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_hvac_ahu_electric_power">
+<code class="sig-name descname">define_output_hvac_ahu_electric_power</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_hvac_ahu_electric_power" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_hvac_generic_power">
+<code class="sig-name descname">define_output_hvac_generic_power</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_hvac_generic_power" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_hvac_tu_electric_power">
+<code class="sig-name descname">define_output_hvac_tu_electric_power</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_hvac_tu_electric_power" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_storage_charge">
+<code class="sig-name descname">define_output_storage_charge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_storage_charge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_storage_discharge">
+<code class="sig-name descname">define_output_storage_discharge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_storage_discharge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_storage_state_of_charge">
+<code class="sig-name descname">define_output_storage_state_of_charge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_storage_state_of_charge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_surfaces_exterior_convection_interior">
+<code class="sig-name descname">define_output_surfaces_exterior_convection_interior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_surfaces_exterior_convection_interior" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_surfaces_exterior_irradiation_gain_exterior">
+<code class="sig-name descname">define_output_surfaces_exterior_irradiation_gain_exterior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_surfaces_exterior_irradiation_gain_exterior" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_window_fresh_air_flow">
+<code class="sig-name descname">define_output_window_fresh_air_flow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_window_fresh_air_flow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_zone_co2_concentration">
+<code class="sig-name descname">define_output_zone_co2_concentration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_zone_co2_concentration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_zone_humidity">
+<code class="sig-name descname">define_output_zone_humidity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_zone_humidity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_output_zone_temperature">
+<code class="sig-name descname">define_output_zone_temperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_zone_temperature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.define_storage_state_of_charge">
+<code class="sig-name descname">define_storage_state_of_charge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_storage_state_of_charge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.discretize_model">
+<code class="sig-name descname">discretize_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.discretize_model" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li>Discretization assuming zero order hold</li>
+<li>Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Discretization#Discretization_of_linear_state_space_models">https://en.wikipedia.org/wiki/Discretization#Discretization_of_linear_state_space_models</a></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.load_disturbance_timeseries">
+<code class="sig-name descname">load_disturbance_timeseries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.load_disturbance_timeseries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.parse_parameter">
+<code class="sig-name descname">parse_parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parameter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.parse_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li>Checks if given parameter is a number.</li>
+<li>If the parameter is not a number, it is assumed to be the name of a parameter from <cite>building_parameters</cite></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cobmo.building.Building.scenario_name">
+<code class="sig-name descname">scenario_name</code><em class="property"> = None</em><a class="headerlink" href="#cobmo.building.Building.scenario_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize building model for given <cite>scenario_name</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cobmo.building.Building.simulate">
+<code class="sig-name descname">simulate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_initial</span></em>, <em class="sig-param"><span class="n">control_timeseries</span></em>, <em class="sig-param"><span class="n">disturbance_timeseries</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.simulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simulate building model with given initial state and control timeseries.</p>
+<ul class="simple">
+<li>Time horizon is derived from scenario definition in database.</li>
+<li>Disturbance timeseries is derived from database.</li>
+<li>TODO: Automatically create initial state from database.</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-cobmo.controller"></span><p>Controller class definition.</p>
 <dl class="py class">
 <dt id="cobmo.controller.Controller">
 <em class="property">class </em><code class="sig-prename descclassname">cobmo.controller.</code><code class="sig-name descname">Controller</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">building</span></em>, <em class="sig-param"><span class="n">problem_type</span><span class="o">=</span><span class="default_value">'operation'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.controller.Controller" title="Permalink to this definition">¶</a></dt>
