@@ -82,10 +82,11 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference external" href="./_static/technical_documentation.pdf#http://">Technical documentation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cobmo-building"><code class="docutils literal notranslate"><span class="pre">cobmo.building</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cobmo-building-model"><code class="docutils literal notranslate"><span class="pre">cobmo.building_model</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-cobmo.config"><code class="docutils literal notranslate"><span class="pre">cobmo.config</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-cobmo.controller"><code class="docutils literal notranslate"><span class="pre">cobmo.controller</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cobmo-optimization-problem"><code class="docutils literal notranslate"><span class="pre">cobmo.optimization_problem</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-cobmo.database_interface"><code class="docutils literal notranslate"><span class="pre">cobmo.database_interface</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cobmo-plots"><code class="docutils literal notranslate"><span class="pre">cobmo.plots</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cobmo-utils"><code class="docutils literal notranslate"><span class="pre">cobmo.utils</span></code></a></li>
@@ -163,8 +164,8 @@
 <p class="admonition-title">Warning</p>
 <p>This reference is work in progress.</p>
 </div>
-<div class="section" id="cobmo-building">
-<h2><code class="docutils literal notranslate"><span class="pre">cobmo.building</span></code><a class="headerlink" href="#cobmo-building" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cobmo-building-model">
+<h2><code class="docutils literal notranslate"><span class="pre">cobmo.building_model</span></code><a class="headerlink" href="#cobmo-building-model" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-cobmo.config">
 <span id="cobmo-config"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.config</span></code><a class="headerlink" href="#module-cobmo.config" title="Permalink to this headline">¶</a></h2>
@@ -175,22 +176,8 @@
 <dd></dd></dl>
 
 </div>
-<div class="section" id="module-cobmo.controller">
-<span id="cobmo-controller"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.controller</span></code><a class="headerlink" href="#module-cobmo.controller" title="Permalink to this headline">¶</a></h2>
-<p>Controller class definition.</p>
-<dl class="py class">
-<dt id="cobmo.controller.Controller">
-<em class="property">class </em><code class="sig-prename descclassname">cobmo.controller.</code><code class="sig-name descname">Controller</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">building</span></em>, <em class="sig-param"><span class="n">problem_type</span><span class="o">=</span><span class="default_value">'operation'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.controller.Controller" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Controller object to store the model predictive control problem.</p>
-<dl class="py method">
-<dt id="cobmo.controller.Controller.solve">
-<code class="sig-name descname">solve</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.controller.Controller.solve" title="Permalink to this definition">¶</a></dt>
-<dd><p>Invoke solver on Pyomo problem.</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="cobmo-optimization-problem">
+<h2><code class="docutils literal notranslate"><span class="pre">cobmo.optimization_problem</span></code><a class="headerlink" href="#cobmo-optimization-problem" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-cobmo.database_interface">
 <span id="cobmo-database-interface"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.database_interface</span></code><a class="headerlink" href="#module-cobmo.database_interface" title="Permalink to this headline">¶</a></h2>
@@ -254,18 +241,18 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     <span class="fa fa-book"> Other Versions</span>
-    v: 0.3.0
+    v: feature/validation
     <span class="fa fa-caret-down"></span>
   </span>
     <div class="rst-other-versions">
         <dl>
             <dt>Tags</dt>
-            <dd><a href="../0.2.0/api.html">0.2.0</a></dd>
-            <dd><a href="api.html">0.3.0</a></dd>
+            <dd><a href="../../0.2.0/api.html">0.2.0</a></dd>
+            <dd><a href="../../0.3.0/api.html">0.3.0</a></dd>
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="../feature/validation/api.html">feature/validation</a></dd>
+            <dd><a href="api.html">feature/validation</a></dd>
         </dl>
     </div>
 </div>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started &mdash; CoBMo  documentation</title>
+  <title>Getting started &mdash; CoBMo  documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Database Reference" href="data.html" />
+    <link rel="next" title="API reference" href="api.html" />
     <link rel="prev" title="CoBMo - Control-oriented Building Model" href="index.html" /> 
 </head>
 
@@ -81,16 +81,19 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#alternative-installation">Alternative Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alternative-installation">Alternative installation</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#papers">Papers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="data.html">Database Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference external" href="./_static/technical_documentation.pdf#http://">Technical documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
 </ul>
 
@@ -137,7 +140,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Getting Started</li>
+      <li>Getting started</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -157,13 +160,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li>Check requirements:
 <ul class="simple">
-<li>Python 3.6</li>
+<li>Python 3.7</li>
 <li><a class="reference external" href="http://www.gurobi.com/">Gurobi Optimizer</a></li>
 </ul>
 </li>
@@ -171,7 +174,7 @@
 <li>In your Python environment, run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">path_to_cobmo_repository</span></code>.</li>
 </ol>
 <div class="section" id="alternative-installation">
-<h3>Alternative Installation<a class="headerlink" href="#alternative-installation" title="Permalink to this headline">¶</a></h3>
+<h3>Alternative installation<a class="headerlink" href="#alternative-installation" title="Permalink to this headline">¶</a></h3>
 <p>If you are running into errors when installing or running CoBMo, this may be due to incompatibility with new versions of package dependencies, which have yet to be discovered and fixed. As a workaround, try installing CoBMo in an tested Anaconda environment via the the provided <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>, which represents the latest Anaconda Python environment in which CoBMo was tested and is expected to work.</p>
 <ol class="simple">
 <li>Check requirements:
@@ -191,6 +194,36 @@
 </div>
 </div>
 </div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory contains several run scripts which demonstrate possible usages of CoBMo:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">run_example.py</span></code>: Example run script for using the building model.</li>
+<li><code class="docutils literal notranslate"><span class="pre">run_storage_planning_example.py</span></code>: Run script for single simulation / optimization of sensible thermal or battery storage.</li>
+<li><code class="docutils literal notranslate"><span class="pre">run_storage_planning_battery_cases.py</span></code>: Run script for BES cases lifetime.</li>
+<li><code class="docutils literal notranslate"><span class="pre">run_validation.py</span></code>: Run script for building model validation.</li>
+<li><code class="docutils literal notranslate"><span class="pre">run_evaluation_load_reduction.py</span></code>: Run script for evaluating demand side flexibility in terms of load reduction.</li>
+<li><code class="docutils literal notranslate"><span class="pre">run_evaluation_price_sensitivity.py</span></code>: Run script for evaluating demand side flexibility in terms of price sensitivity.</li>
+</ul>
+</div>
+<div class="section" id="papers">
+<h2>Papers<a class="headerlink" href="#papers" title="Permalink to this headline">¶</a></h2>
+<p>The following papers have been prepared with CoBMo:</p>
+<ul class="simple">
+<li>Anthony Vautrin, Sebastian Troitzsch, Srikkanth Ramachandran, and Thomas Hamacher (2019). <strong>Demand Controlled Ventilation for Electric Demand Side Flexibility.</strong> IBPSA Building Simulation Conference.
+<ul>
+<li>A preliminary implementation of CoBMo was used to prepare the results for this paper.</li>
+<li>The related scripts are currently not included in the repository.</li>
+</ul>
+</li>
+<li>[Submitted.] Sebastian Troitzsch, and Thomas Hamacher. <strong>Control-oriented Thermal Building Modelling.</strong>
+<ul>
+<li>CoBMo <a class="reference external" href="https://github.com/TUMCREATE-ESTL/cobmo/releases/tag/0.3.0">version 0.3.0</a> was used to prepare the results for this paper.</li>
+<li>The related scripts are <a class="reference external" href="https://github.com/TUMCREATE-ESTL/cobmo/blob/0.3.0/examples/run_evaluation_load_reduction.py"><code class="docutils literal notranslate"><span class="pre">examples/run_evaluation_load_reduction.py</span></code></a> and <a class="reference external" href="https://github.com/TUMCREATE-ESTL/cobmo/blob/0.3.0/examples/run_evaluation_price_sensitivity.py"><code class="docutils literal notranslate"><span class="pre">examples/run_evaluation_price_sensitivity.py</span></code></a>.</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="contributing">
 <h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
 <p>If you are keen to contribute to this project, please see <a class="reference internal" href="contributing.html"><span class="doc">Contributing</span></a>.</p>
@@ -205,7 +238,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="data.html" class="btn btn-neutral float-right" title="Database Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="api.html" class="btn btn-neutral float-right" title="API reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="CoBMo - Control-oriented Building Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -235,18 +268,18 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     <span class="fa fa-book"> Other Versions</span>
-    v: 0.2.0
+    v: feature/validation
     <span class="fa fa-caret-down"></span>
   </span>
     <div class="rst-other-versions">
         <dl>
             <dt>Tags</dt>
-            <dd><a href="intro.html">0.2.0</a></dd>
-            <dd><a href="../0.3.0/intro.html">0.3.0</a></dd>
+            <dd><a href="../../0.2.0/intro.html">0.2.0</a></dd>
+            <dd><a href="../../0.3.0/intro.html">0.3.0</a></dd>
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="../feature/validation/intro.html">feature/validation</a></dd>
+            <dd><a href="intro.html">feature/validation</a></dd>
         </dl>
     </div>
 </div>

@@ -81,6 +81,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference external" href="./_static/technical_documentation.pdf#http://">Technical documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">Data reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
@@ -150,7 +151,12 @@
             
   <div class="section" id="cobmo-control-oriented-building-model">
 <h1>CoBMo - Control-oriented Building Model<a class="headerlink" href="#cobmo-control-oriented-building-model" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://zenodo.org/badge/latestdoi/173782015"><img alt="https://zenodo.org/badge/173782015.svg" src="https://zenodo.org/badge/173782015.svg" /></a></p>
 <p>The Control-oriented Building Model (CoBMo) is a building modelling framework catering specifically for the formulation of MPC problems for thermal building systems by keeping all model equations in the linear, i.e., convex, domain. CoBMo provides a mathematical model which expresses the relationship between the electric load of the thermal building systems and the indoor air climate with consideration for interactions of the building with its environment, its occupants and appliances. To this end, CoBMo currently implements models for 1) the thermal comfort of building occupants as well as 2) the indoor air quality.</p>
+<div class="section" id="work-in-progress">
+<h2>Work in Progress<a class="headerlink" href="#work-in-progress" title="Permalink to this headline">¶</a></h2>
+<p>Please note that the repository is under active development and the interface may change without notice. Create an <a class="reference external" href="https://github.com/TUMCREATE-ESTL/cobmo/issues">issue</a> if you have ideas / comments / criticism that may help to make the tool more useful.</p>
+</div>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
@@ -162,38 +168,42 @@
 <li class="toctree-l2"><a class="reference internal" href="intro.html#contributing">Contributing</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference external" href="./_static/technical_documentation.pdf#http://">Technical documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.html#cobmo-building"><code class="docutils literal notranslate"><span class="pre">cobmo.building</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#cobmo-building-model"><code class="docutils literal notranslate"><span class="pre">cobmo.building_model</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#module-cobmo.config"><code class="docutils literal notranslate"><span class="pre">cobmo.config</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html#module-cobmo.controller"><code class="docutils literal notranslate"><span class="pre">cobmo.controller</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#cobmo-optimization-problem"><code class="docutils literal notranslate"><span class="pre">cobmo.optimization_problem</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#module-cobmo.database_interface"><code class="docutils literal notranslate"><span class="pre">cobmo.database_interface</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#cobmo-plots"><code class="docutils literal notranslate"><span class="pre">cobmo.plots</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="api.html#cobmo-utils"><code class="docutils literal notranslate"><span class="pre">cobmo.utils</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">Data reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-blind-types"><code class="docutils literal notranslate"><span class="pre">building_blind_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-hvac-ahu-types"><code class="docutils literal notranslate"><span class="pre">building_hvac_ahu_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-hvac-generic-types"><code class="docutils literal notranslate"><span class="pre">building_hvac_generic_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-hvac-tu-types"><code class="docutils literal notranslate"><span class="pre">building_hvac_tu_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-internal-gain-timeseries"><code class="docutils literal notranslate"><span class="pre">building_internal_gain_timeseries</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-internal-gain-types"><code class="docutils literal notranslate"><span class="pre">building_internal_gain_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-linearization-types"><code class="docutils literal notranslate"><span class="pre">building_linearization_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-parameter-sets"><code class="docutils literal notranslate"><span class="pre">building_parameter_sets</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-scenarios"><code class="docutils literal notranslate"><span class="pre">building_scenarios</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-storage-types"><code class="docutils literal notranslate"><span class="pre">building_storage_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-surface-types"><code class="docutils literal notranslate"><span class="pre">building_surface_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-surfaces-adiabatic"><code class="docutils literal notranslate"><span class="pre">building_surfaces_adiabatic</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-surfaces-exterior"><code class="docutils literal notranslate"><span class="pre">building_surfaces_exterior</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-surfaces-interior"><code class="docutils literal notranslate"><span class="pre">building_surfaces_interior</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-window-types"><code class="docutils literal notranslate"><span class="pre">building_window_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-zone-constraint-profiles"><code class="docutils literal notranslate"><span class="pre">building_zone_constraint_profiles</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-zone-types"><code class="docutils literal notranslate"><span class="pre">building_zone_types</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="data.html#building-zones"><code class="docutils literal notranslate"><span class="pre">building_zones</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#blind-types"><code class="docutils literal notranslate"><span class="pre">blind_types</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#buildings"><code class="docutils literal notranslate"><span class="pre">buildings</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#constraint-schedules"><code class="docutils literal notranslate"><span class="pre">constraint_schedules</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#electricity-price-timeseries"><code class="docutils literal notranslate"><span class="pre">electricity_price_timeseries</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#hvac-ahu-types"><code class="docutils literal notranslate"><span class="pre">hvac_ahu_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#hvac-generic-types"><code class="docutils literal notranslate"><span class="pre">hvac_generic_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#hvac-radiator-types"><code class="docutils literal notranslate"><span class="pre">hvac_radiator_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#hvac-tu-types"><code class="docutils literal notranslate"><span class="pre">hvac_tu_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#initial-state-types"><code class="docutils literal notranslate"><span class="pre">initial_state_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#internal-gain-schedules"><code class="docutils literal notranslate"><span class="pre">internal_gain_schedules</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#internal-gain-timeseries"><code class="docutils literal notranslate"><span class="pre">internal_gain_timeseries</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#internal-gain-types"><code class="docutils literal notranslate"><span class="pre">internal_gain_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#linearization-types"><code class="docutils literal notranslate"><span class="pre">linearization_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#parameters"><code class="docutils literal notranslate"><span class="pre">parameters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#scenarios"><code class="docutils literal notranslate"><span class="pre">scenarios</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#storage-types"><code class="docutils literal notranslate"><span class="pre">storage_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#surface-types"><code class="docutils literal notranslate"><span class="pre">surface_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#surfaces-adiabatic"><code class="docutils literal notranslate"><span class="pre">surfaces_adiabatic</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#surfaces-exterior"><code class="docutils literal notranslate"><span class="pre">surfaces_exterior</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#surfaces-interior"><code class="docutils literal notranslate"><span class="pre">surfaces_interior</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#weather-timeseries"><code class="docutils literal notranslate"><span class="pre">weather_timeseries</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="data.html#weather-types"><code class="docutils literal notranslate"><span class="pre">weather_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#window-types"><code class="docutils literal notranslate"><span class="pre">window_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#zone-types"><code class="docutils literal notranslate"><span class="pre">zone_types</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#zones"><code class="docutils literal notranslate"><span class="pre">zones</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a><ul>
@@ -243,18 +253,18 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     <span class="fa fa-book"> Other Versions</span>
-    v: 0.3.0
+    v: feature/validation
     <span class="fa fa-caret-down"></span>
   </span>
     <div class="rst-other-versions">
         <dl>
             <dt>Tags</dt>
-            <dd><a href="../0.2.0/index.html">0.2.0</a></dd>
-            <dd><a href="index.html">0.3.0</a></dd>
+            <dd><a href="../../0.2.0/index.html">0.2.0</a></dd>
+            <dd><a href="../../0.3.0/index.html">0.3.0</a></dd>
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="../feature/validation/index.html">feature/validation</a></dd>
+            <dd><a href="index.html">feature/validation</a></dd>
         </dl>
     </div>
 </div>
