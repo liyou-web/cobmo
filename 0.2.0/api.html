@@ -149,9 +149,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-cobmo.building">
-<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-cobmo.building" title="Permalink to this headline">¶</a></h1>
-<p>Building model class definition.</p>
+  <div class="section" id="module-cobmo.utils">
+<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-cobmo.utils" title="Permalink to this headline">¶</a></h1>
+<p>Utility function definitions.</p>
+<dl class="py function">
+<dt id="cobmo.utils.calculate_discounted_payback_time">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_discounted_payback_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lifetime</span></em>, <em class="sig-param"><span class="n">investment_cost</span></em>, <em class="sig-param"><span class="n">operation_cost</span></em>, <em class="sig-param"><span class="n">operation_cost_baseline</span></em>, <em class="sig-param"><span class="n">interest_rate</span><span class="o">=</span><span class="default_value">0.06</span></em>, <em class="sig-param"><span class="n">investment_type</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">save_plots</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">results_path</span><span class="o">=</span><span class="default_value">'/tmp/tmpb_ve8uj7/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/results'</span></em>, <em class="sig-param"><span class="n">file_id</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate simple / discounted payback time in years.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cobmo.utils.calculate_error">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">predicted_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the error between expected and predicted timeseries dataframes.</p>
+<ul class="simple">
+<li>Note: This function doesn’t check if the data format is valid.</li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cobmo.utils.calculate_irradiation_surfaces">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_irradiation_surfaces</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">weather_type</span><span class="o">=</span><span class="default_value">'singapore_nus'</span></em>, <em class="sig-param"><span class="n">irradiation_model</span><span class="o">=</span><span class="default_value">'dirint'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_irradiation_surfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates irradiation for surfaces oriented towards east, south, west &amp; north.</p>
+<ul class="simple">
+<li>Operates on the database: Updates according columns in <cite>weather_timeseries</cite>.</li>
+<li>Takes irradition_horizontal as measured global horizontal irradiation (ghi).</li>
+<li>Based on pvlib-python toolbox: <a class="reference external" href="https://github.com/pvlib/pvlib-python">https://github.com/pvlib/pvlib-python</a></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cobmo.utils.calculate_sky_temperature">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_sky_temperature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">weather_type</span><span class="o">=</span><span class="default_value">'singapore_nus'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_sky_temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates sky temperatures from ambient air temperature for tropical weather.</p>
+<ul class="simple">
+<li>Ambient air temperature is decreased by 11K to get the sky temperature.</li>
+<li>TODO: According to ISO ???</li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cobmo.utils.calculate_tank_diameter_height">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_tank_diameter_height</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">volume</span></em>, <em class="sig-param"><span class="n">aspect_ratio</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_tank_diameter_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates diameter and height of storage tank based on volume and aspect ratio.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cobmo.utils.get_battery_parameters">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">get_battery_parameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">battery_parameters_path</span><span class="o">=</span><span class="default_value">'/tmp/tmpb_ve8uj7/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/data/storage_data/battery_storage_parameters.csv'</span></em>, <em class="sig-param"><span class="n">cost_conversion_factor</span><span class="o">=</span><span class="default_value">1.37</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load battery parameters from CSV, apply <cite>cost_conversion_factor</cite> to cost columns and return as dataframe.</p>
+</dd></dl>
+
+<span class="target" id="module-cobmo.building"></span><p>Building model class definition.</p>
 <dl class="py class">
 <dt id="cobmo.building.Building">
 <em class="property">class </em><code class="sig-prename descclassname">cobmo.building.</code><code class="sig-name descname">Building</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">scenario_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building" title="Permalink to this definition">¶</a></dt>
