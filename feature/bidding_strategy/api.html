@@ -172,6 +172,11 @@
 <div class="section" id="module-cobmo.config">
 <span id="cobmo-config"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.config</span></code><a class="headerlink" href="#module-cobmo.config" title="Permalink to this headline">¶</a></h2>
 <p>Configuration parameters.</p>
+<dl class="py function">
+<dt id="cobmo.config.get_logger">
+<code class="sig-prename descclassname">cobmo.config.</code><code class="sig-name descname">get_logger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.config.get_logger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="cobmo-optimization-problem">
 <h2><code class="docutils literal notranslate"><span class="pre">cobmo.optimization_problem</span></code><a class="headerlink" href="#cobmo-optimization-problem" title="Permalink to this headline">¶</a></h2>
@@ -180,15 +185,15 @@
 <span id="cobmo-database-interface"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.database_interface</span></code><a class="headerlink" href="#module-cobmo.database_interface" title="Permalink to this headline">¶</a></h2>
 <p>Database interface function definitions.</p>
 <dl class="py function">
-<dt id="cobmo.database_interface.create_database">
-<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">create_database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sqlite_path</span></em>, <em class="sig-param"><span class="n">sql_path</span></em>, <em class="sig-param"><span class="n">csv_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.create_database" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create SQLITE database from SQL schema file and CSV files.</p>
+<dt id="cobmo.database_interface.connect_database">
+<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">connect_database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_path</span><span class="o">=</span><span class="default_value">'/tmp/tmp47p9vtye/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/data'</span></em>, <em class="sig-param"><span class="n">overwrite_database</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.connect_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect to the database at given <cite>data_path</cite> and return connection handle.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt id="cobmo.database_interface.connect_database">
-<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">connect_database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_path</span><span class="o">=</span><span class="default_value">'/tmp/tmpmll2bhbj/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/data'</span></em>, <em class="sig-param"><span class="n">overwrite_database</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.connect_database" title="Permalink to this definition">¶</a></dt>
-<dd><p>Connect to the database at given <cite>data_path</cite> and return connection handle.</p>
+<dt id="cobmo.database_interface.create_database">
+<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">create_database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sqlite_path</span></em>, <em class="sig-param"><span class="n">sql_path</span></em>, <em class="sig-param"><span class="n">csv_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.create_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create SQLITE database from SQL schema file and CSV files.</p>
 </dd></dl>
 
 </div>
@@ -212,6 +217,21 @@
 <span id="cobmo-utils"></span><h2><code class="docutils literal notranslate"><span class="pre">cobmo.utils</span></code><a class="headerlink" href="#module-cobmo.utils" title="Permalink to this headline">¶</a></h2>
 <p>Utility function definitions.</p>
 <dl class="py function">
+<dt id="cobmo.utils.calculate_discounted_payback_time">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_discounted_payback_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lifetime</span></em>, <em class="sig-param"><span class="n">investment_cost</span></em>, <em class="sig-param"><span class="n">operation_cost</span></em>, <em class="sig-param"><span class="n">operation_cost_baseline</span></em>, <em class="sig-param"><span class="n">interest_rate</span><span class="o">=</span><span class="default_value">0.06</span></em>, <em class="sig-param"><span class="n">investment_type</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">save_plots</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">results_path</span><span class="o">=</span><span class="default_value">'/tmp/tmp47p9vtye/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/results'</span></em>, <em class="sig-param"><span class="n">file_id</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate simple / discounted payback time in years.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cobmo.utils.calculate_error">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">predicted_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the error between expected and predicted timeseries dataframes.</p>
+<ul class="simple">
+<li>Note: This function doesn’t check if the data format is valid.</li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
 <dt id="cobmo.utils.calculate_irradiation_surfaces">
 <code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_irradiation_surfaces</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">weather_type</span><span class="o">=</span><span class="default_value">'singapore_nus'</span></em>, <em class="sig-param"><span class="n">irradiation_model</span><span class="o">=</span><span class="default_value">'dirint'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_irradiation_surfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates irradiation for surfaces oriented towards east, south, west &amp; north.</p>
@@ -233,15 +253,6 @@
 </dd></dl>
 
 <dl class="py function">
-<dt id="cobmo.utils.calculate_error">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">predicted_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_error" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the error between expected and predicted timeseries dataframes.</p>
-<ul class="simple">
-<li>Note: This function doesn’t check if the data format is valid.</li>
-</ul>
-</dd></dl>
-
-<dl class="py function">
 <dt id="cobmo.utils.calculate_tank_diameter_height">
 <code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_tank_diameter_height</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">volume</span></em>, <em class="sig-param"><span class="n">aspect_ratio</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_tank_diameter_height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates diameter and height of storage tank based on volume and aspect ratio.</p>
@@ -249,14 +260,8 @@
 
 <dl class="py function">
 <dt id="cobmo.utils.get_battery_parameters">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">get_battery_parameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">battery_parameters_path</span><span class="o">=</span><span class="default_value">'/tmp/tmpmll2bhbj/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/data/storage_data/battery_storage_parameters.csv'</span></em>, <em class="sig-param"><span class="n">cost_conversion_factor</span><span class="o">=</span><span class="default_value">1.37</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">get_battery_parameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">battery_parameters_path</span><span class="o">=</span><span class="default_value">'/tmp/tmp47p9vtye/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/data/storage_data/battery_storage_parameters.csv'</span></em>, <em class="sig-param"><span class="n">cost_conversion_factor</span><span class="o">=</span><span class="default_value">1.37</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load battery parameters from CSV, apply <cite>cost_conversion_factor</cite> to cost columns and return as dataframe.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="cobmo.utils.calculate_discounted_payback_time">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_discounted_payback_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lifetime</span></em>, <em class="sig-param"><span class="n">investment_cost</span></em>, <em class="sig-param"><span class="n">operation_cost</span></em>, <em class="sig-param"><span class="n">operation_cost_baseline</span></em>, <em class="sig-param"><span class="n">interest_rate</span><span class="o">=</span><span class="default_value">0.06</span></em>, <em class="sig-param"><span class="n">investment_type</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">save_plots</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">results_path</span><span class="o">=</span><span class="default_value">'/tmp/tmpmll2bhbj/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/results'</span></em>, <em class="sig-param"><span class="n">file_id</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate simple / discounted payback time in years.</p>
 </dd></dl>
 
 </div>
@@ -311,6 +316,7 @@
         </dl>
         <dl>
             <dt>Branches</dt>
+            <dd><a href="../bidding_strategy_rolling_window/api.html">feature/bidding_strategy_rolling_window</a></dd>
             <dd><a href="../../develop/api.html">develop</a></dd>
             <dd><a href="api.html">feature/bidding_strategy</a></dd>
             <dd><a href="../create_tower_revision/api.html">feature/create_tower_revision</a></dd>
