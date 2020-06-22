@@ -158,21 +158,6 @@
 <span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-cobmo.utils" title="Permalink to this headline">¶</a></h1>
 <p>Utility function definitions.</p>
 <dl class="py function">
-<dt id="cobmo.utils.calculate_discounted_payback_time">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_discounted_payback_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lifetime</span></em>, <em class="sig-param"><span class="n">investment_cost</span></em>, <em class="sig-param"><span class="n">operation_cost</span></em>, <em class="sig-param"><span class="n">operation_cost_baseline</span></em>, <em class="sig-param"><span class="n">interest_rate</span><span class="o">=</span><span class="default_value">0.06</span></em>, <em class="sig-param"><span class="n">investment_type</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">save_plots</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">results_path</span><span class="o">=</span><span class="default_value">'/tmp/tmpsh0_4t8l/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/results'</span></em>, <em class="sig-param"><span class="n">file_id</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate simple / discounted payback time in years.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt id="cobmo.utils.calculate_error">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">predicted_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_error" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the error between expected and predicted timeseries dataframes.</p>
-<ul class="simple">
-<li>Note: This function doesn’t check if the data format is valid.</li>
-</ul>
-</dd></dl>
-
-<dl class="py function">
 <dt id="cobmo.utils.calculate_irradiation_surfaces">
 <code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_irradiation_surfaces</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">weather_type</span><span class="o">=</span><span class="default_value">'singapore_nus'</span></em>, <em class="sig-param"><span class="n">irradiation_model</span><span class="o">=</span><span class="default_value">'dirint'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_irradiation_surfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates irradiation for surfaces oriented towards east, south, west &amp; north.</p>
@@ -194,6 +179,15 @@
 </dd></dl>
 
 <dl class="py function">
+<dt id="cobmo.utils.calculate_error">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">predicted_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the error between expected and predicted timeseries dataframes.</p>
+<ul class="simple">
+<li>Note: This function doesn’t check if the data format is valid.</li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
 <dt id="cobmo.utils.calculate_tank_diameter_height">
 <code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_tank_diameter_height</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">volume</span></em>, <em class="sig-param"><span class="n">aspect_ratio</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_tank_diameter_height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates diameter and height of storage tank based on volume and aspect ratio.</p>
@@ -201,8 +195,14 @@
 
 <dl class="py function">
 <dt id="cobmo.utils.get_battery_parameters">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">get_battery_parameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">battery_parameters_path</span><span class="o">=</span><span class="default_value">'/tmp/tmpsh0_4t8l/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/data/storage_data/battery_storage_parameters.csv'</span></em>, <em class="sig-param"><span class="n">cost_conversion_factor</span><span class="o">=</span><span class="default_value">1.37</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">get_battery_parameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">battery_parameters_path</span><span class="o">=</span><span class="default_value">'/tmp/tmp0wkexdzg/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/data/storage_data/battery_storage_parameters.csv'</span></em>, <em class="sig-param"><span class="n">cost_conversion_factor</span><span class="o">=</span><span class="default_value">1.37</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load battery parameters from CSV, apply <cite>cost_conversion_factor</cite> to cost columns and return as dataframe.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cobmo.utils.calculate_discounted_payback_time">
+<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_discounted_payback_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lifetime</span></em>, <em class="sig-param"><span class="n">investment_cost</span></em>, <em class="sig-param"><span class="n">operation_cost</span></em>, <em class="sig-param"><span class="n">operation_cost_baseline</span></em>, <em class="sig-param"><span class="n">interest_rate</span><span class="o">=</span><span class="default_value">0.06</span></em>, <em class="sig-param"><span class="n">investment_type</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">save_plots</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">results_path</span><span class="o">=</span><span class="default_value">'/tmp/tmp0wkexdzg/ebb865d70016ba503f05ccfe1ba5bd8ed19a5f4f/results'</span></em>, <em class="sig-param"><span class="n">file_id</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate simple / discounted payback time in years.</p>
 </dd></dl>
 
 <span class="target" id="module-cobmo.building"></span><p>Building model class definition.</p>
@@ -211,58 +211,19 @@
 <em class="property">class </em><code class="sig-prename descclassname">cobmo.building.</code><code class="sig-name descname">Building</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">scenario_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Building model object.</p>
-<dl class="py method">
-<dt id="cobmo.building.Building.define_augmented_model">
-<code class="sig-name descname">define_augmented_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_augmented_model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Define augmented state space model matrices.</p>
-<ul class="simple">
-<li>Based on Oldewurtel 2011: <a class="reference external" href="https://doi.org/10.3929/ethz-a-007157625%0A">https://doi.org/10.3929/ethz-a-007157625%0A</a></li>
-<li>Construct augmented state space matrices based on ‘normal’ state space matrices.</li>
-<li>Augmented state space matrices are stored in the build model (not returned).</li>
-<li>TODO: Validate matrices.</li>
-<li>TODO: Check alternatives for np.block(), which is slow for a large number of time steps.</li>
-</ul>
+<dl class="py attribute">
+<dt id="cobmo.building.Building.scenario_name">
+<code class="sig-name descname">scenario_name</code><em class="property"> = None</em><a class="headerlink" href="#cobmo.building.Building.scenario_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize building model for given <cite>scenario_name</cite>.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="cobmo.building.Building.define_co2_transfer_hvac_ahu">
-<code class="sig-name descname">define_co2_transfer_hvac_ahu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_co2_transfer_hvac_ahu" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_heat_transfer_coefficients">
-<code class="sig-name descname">define_heat_transfer_coefficients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_coefficients" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_heat_transfer_hvac_ahu">
-<code class="sig-name descname">define_heat_transfer_hvac_ahu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_hvac_ahu" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_heat_transfer_hvac_generic">
-<code class="sig-name descname">define_heat_transfer_hvac_generic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_hvac_generic" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_heat_transfer_hvac_tu">
-<code class="sig-name descname">define_heat_transfer_hvac_tu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_hvac_tu" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_heat_transfer_infiltration">
-<code class="sig-name descname">define_heat_transfer_infiltration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_infiltration" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_heat_transfer_internal_gains">
-<code class="sig-name descname">define_heat_transfer_internal_gains</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_internal_gains" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_heat_transfer_surfaces_adiabatic">
-<code class="sig-name descname">define_heat_transfer_surfaces_adiabatic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_adiabatic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Thermal model: Adiabatic surfaces</p>
+<dt id="cobmo.building.Building.parse_parameter">
+<code class="sig-name descname">parse_parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parameter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.parse_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li>Checks if given parameter is a number.</li>
+<li>If the parameter is not a number, it is assumed to be the name of a parameter from <cite>building_parameters</cite></li>
+</ul>
 </dd></dl>
 
 <dl class="py method">
@@ -278,19 +239,10 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="cobmo.building.Building.define_heat_transfer_window_air_flow">
-<code class="sig-name descname">define_heat_transfer_window_air_flow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_window_air_flow" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_humidity_transfer_hvac_ahu">
-<code class="sig-name descname">define_humidity_transfer_hvac_ahu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_humidity_transfer_hvac_ahu" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_ahu_fresh_air_flow">
-<code class="sig-name descname">define_output_ahu_fresh_air_flow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_ahu_fresh_air_flow" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="cobmo.building.Building.define_heat_transfer_surfaces_adiabatic">
+<code class="sig-name descname">define_heat_transfer_surfaces_adiabatic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_adiabatic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thermal model: Adiabatic surfaces</p>
+</dd></dl>
 
 <dl class="py method">
 <dt id="cobmo.building.Building.define_output_constraint_timeseries">
@@ -299,76 +251,6 @@
 <li>Generate minimum/maximum constraint timeseries based on <cite>building_zone_constraint_profiles</cite>.</li>
 </ul>
 </dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_fresh_air_flow">
-<code class="sig-name descname">define_output_fresh_air_flow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_fresh_air_flow" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_hvac_ahu_electric_power">
-<code class="sig-name descname">define_output_hvac_ahu_electric_power</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_hvac_ahu_electric_power" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_hvac_generic_power">
-<code class="sig-name descname">define_output_hvac_generic_power</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_hvac_generic_power" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_hvac_tu_electric_power">
-<code class="sig-name descname">define_output_hvac_tu_electric_power</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_hvac_tu_electric_power" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_storage_charge">
-<code class="sig-name descname">define_output_storage_charge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_storage_charge" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_storage_discharge">
-<code class="sig-name descname">define_output_storage_discharge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_storage_discharge" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_storage_state_of_charge">
-<code class="sig-name descname">define_output_storage_state_of_charge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_storage_state_of_charge" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_surfaces_exterior_convection_interior">
-<code class="sig-name descname">define_output_surfaces_exterior_convection_interior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_surfaces_exterior_convection_interior" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_surfaces_exterior_irradiation_gain_exterior">
-<code class="sig-name descname">define_output_surfaces_exterior_irradiation_gain_exterior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_surfaces_exterior_irradiation_gain_exterior" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_window_fresh_air_flow">
-<code class="sig-name descname">define_output_window_fresh_air_flow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_window_fresh_air_flow" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_zone_co2_concentration">
-<code class="sig-name descname">define_output_zone_co2_concentration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_zone_co2_concentration" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_zone_humidity">
-<code class="sig-name descname">define_output_zone_humidity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_zone_humidity" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_output_zone_temperature">
-<code class="sig-name descname">define_output_zone_temperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_zone_temperature" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.define_storage_state_of_charge">
-<code class="sig-name descname">define_storage_state_of_charge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_storage_state_of_charge" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="py method">
 <dt id="cobmo.building.Building.discretize_model">
@@ -380,23 +262,16 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="cobmo.building.Building.load_disturbance_timeseries">
-<code class="sig-name descname">load_disturbance_timeseries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.load_disturbance_timeseries" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cobmo.building.Building.parse_parameter">
-<code class="sig-name descname">parse_parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parameter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.parse_parameter" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Checks if given parameter is a number.</li>
-<li>If the parameter is not a number, it is assumed to be the name of a parameter from <cite>building_parameters</cite></li>
+<dt id="cobmo.building.Building.define_augmented_model">
+<code class="sig-name descname">define_augmented_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_augmented_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Define augmented state space model matrices.</p>
+<ul class="simple">
+<li>Based on Oldewurtel 2011: <a class="reference external" href="https://doi.org/10.3929/ethz-a-007157625%0A">https://doi.org/10.3929/ethz-a-007157625%0A</a></li>
+<li>Construct augmented state space matrices based on ‘normal’ state space matrices.</li>
+<li>Augmented state space matrices are stored in the build model (not returned).</li>
+<li>TODO: Validate matrices.</li>
+<li>TODO: Check alternatives for np.block(), which is slow for a large number of time steps.</li>
 </ul>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="cobmo.building.Building.scenario_name">
-<code class="sig-name descname">scenario_name</code><em class="property"> = None</em><a class="headerlink" href="#cobmo.building.Building.scenario_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize building model for given <cite>scenario_name</cite>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -485,9 +360,9 @@
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="../feature/bidding_strategy_rolling_window/api.html">feature/bidding_strategy_rolling_window</a></dd>
             <dd><a href="../develop/api.html">develop</a></dd>
             <dd><a href="../feature/bidding_strategy/api.html">feature/bidding_strategy</a></dd>
+            <dd><a href="../feature/bidding_strategy_rolling_window/api.html">feature/bidding_strategy_rolling_window</a></dd>
             <dd><a href="../feature/create_tower_revision/api.html">feature/create_tower_revision</a></dd>
             <dd><a href="../feature/districtcooling/api.html">feature/districtcooling</a></dd>
             <dd><a href="../feature/parameter_fixes/api.html">feature/parameter_fixes</a></dd>
