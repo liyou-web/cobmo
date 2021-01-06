@@ -178,8 +178,6 @@ Zone type characteristics.
 | `heat_capacity` | J/(m³K) | Specific heat capacity. |
 | `infiltration_rate` | 1/h | Infiltration rate. |
 | `internal_gain_type` | | Type identifier as defined in `internal_gain_types`. |
-| `window_type` | | Type identifier as defined in `window_types`. |
-| `blind_type` | | Type identifier as defined in `blind_types`. *Currently not used.* |
 | `hvac_generic_type` | | Type identifier as defined in `hvac_generic_types`. |
 | `hvac_radiator_type` | | Type identifier as defined in `hvac_radiator_types`. |
 | `hvac_ahu_type` | | Type identifier as defined in `hvac_ahu_types`. |
@@ -279,15 +277,6 @@ Terminal unit (TU) set points and characteristics.
 | `radiator_fin_effectiveness` | - | Radiator fin effectiveness. |
 | `radiator_heating_efficiency` | - | Heating efficiency, to consider losses in the radiator heat supply. This is not the efficiency of the heating plant, which is instead defined in `plant_heating_types`. |
 
-### `blind_types`
-
-Window blind characteristics. *Currently not used.*
-
-| Column | Unit | Description |
-| --- |:---:| --- |
-| `blind_type` | | Unique type identifier. |
-| `blind_efficiency` | - | Blind efficiency (absorbed irradiation / incident irradiation). |
-
 ### `constraint_schedules`
 
 The constraint timeseries is constructed by obtaining the appropriate value for `internal_gain_occupancy` / `internal_gain_appliances` based on the `time_period` in `ddTHH:MM` format. Intermediate time steps are interpolated linearly. The daily schedule is repeated for any weekday greater than or equal to `dd` until the next defined `dd`. The initial value for each `constraint_type` must start at `time_period = 01T00:00`.
@@ -356,9 +345,9 @@ Surface type characteristics.
 | --- |:---:| --- |
 | `surface_type` | | Unique type identifier. |
 | `heat_capacity` | J/(m³K) | Specific heat capacity. |
-| `heat_transfer_coefficient_surface_conduction` | W/m²K | Conductive internal heat transfer coefficient. |
-| `absorptivity` | - | Absorptivity factor / irradiation gain coefficient (absorbed irradiation / incident irradiation). |
-| `emissivity` | - | Emissivity factor. |
+| `heat_transfer_coefficient_conduction_surface` | W/(m²K) | Conductive internal heat transfer coefficient. |
+| `absorptivity_surface` | - | Absorptivity factor / irradiation gain coefficient (absorbed irradiation / incident irradiation). |
+| `emissivity_surface` | - | Emissivity factor. |
 | `window_type` | | Type identifier as defined in `window_types`. |
 | `window_wall_ratio` | - | Window surface area / total surface area. |
 | `sky_view_factor` | - | Sky view factor. |
@@ -370,6 +359,6 @@ Window characteristics.
 | Column | Unit | Description |
 | --- |:---:| --- |
 | `window_type` | | Unique type identifier. |
-| `thermal_resistance_window` | m²K/W | Specific thermal resistance. |
+| `heat_transfer_coefficient_conduction_window` | W/(m²K) | Conductive internal heat transfer coefficient. |
 | `absorptivity_window` | - | Irradiation gain coefficient (absorbed irradiation / incident irradiation). |
 | `emissivity_window` | - | Emissivity factor. |

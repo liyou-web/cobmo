@@ -116,7 +116,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#hvac-ahu-types"><code class="docutils literal notranslate"><span class="pre">hvac_ahu_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hvac-tu-types"><code class="docutils literal notranslate"><span class="pre">hvac_tu_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hvac-radiator-types"><code class="docutils literal notranslate"><span class="pre">hvac_radiator_types</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#blind-types"><code class="docutils literal notranslate"><span class="pre">blind_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#constraint-schedules"><code class="docutils literal notranslate"><span class="pre">constraint_schedules</span></code></a></li>
 </ul>
 </li>
@@ -768,16 +767,6 @@
 <td>Type identifier as defined in <code>internal_gain_types</code>.</td>
 </tr>
 <tr>
-<td><code>window_type</code></td>
-<td align="center"></td>
-<td>Type identifier as defined in <code>window_types</code>.</td>
-</tr>
-<tr>
-<td><code>blind_type</code></td>
-<td align="center"></td>
-<td>Type identifier as defined in <code>blind_types</code>. <em>Currently not used.</em></td>
-</tr>
-<tr>
 <td><code>hvac_generic_type</code></td>
 <td align="center"></td>
 <td>Type identifier as defined in <code>hvac_generic_types</code>.</td>
@@ -1131,30 +1120,6 @@
 </tr>
 </tbody>
 </table></div>
-<div class="section" id="blind-types">
-<h3><code class="docutils literal notranslate"><span class="pre">blind_types</span></code><a class="headerlink" href="#blind-types" title="Permalink to this headline">¶</a></h3>
-<p>Window blind characteristics. <em>Currently not used.</em></p>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Column</th>
-<th align="center">Unit</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>blind_type</code></td>
-<td align="center"></td>
-<td>Unique type identifier.</td>
-</tr>
-<tr>
-<td><code>blind_efficiency</code></td>
-<td align="center">-</td>
-<td>Blind efficiency (absorbed irradiation / incident irradiation).</td>
-</tr>
-</tbody>
-</table></div>
 <div class="section" id="constraint-schedules">
 <h3><code class="docutils literal notranslate"><span class="pre">constraint_schedules</span></code><a class="headerlink" href="#constraint-schedules" title="Permalink to this headline">¶</a></h3>
 <p>The constraint timeseries is constructed by obtaining the appropriate value for <code class="docutils literal notranslate"><span class="pre">internal_gain_occupancy</span></code> / <code class="docutils literal notranslate"><span class="pre">internal_gain_appliances</span></code> based on the <code class="docutils literal notranslate"><span class="pre">time_period</span></code> in <code class="docutils literal notranslate"><span class="pre">ddTHH:MM</span></code> format. Intermediate time steps are interpolated linearly. The daily schedule is repeated for any weekday greater than or equal to <code class="docutils literal notranslate"><span class="pre">dd</span></code> until the next defined <code class="docutils literal notranslate"><span class="pre">dd</span></code>. The initial value for each <code class="docutils literal notranslate"><span class="pre">constraint_type</span></code> must start at <code class="docutils literal notranslate"><span class="pre">time_period</span> <span class="pre">=</span> <span class="pre">01T00:00</span></code>.</p>
@@ -1387,17 +1352,17 @@
 <td>Specific heat capacity.</td>
 </tr>
 <tr>
-<td><code>heat_transfer_coefficient_surface_conduction</code></td>
-<td align="center">W/m²K</td>
+<td><code>heat_transfer_coefficient_conduction_surface</code></td>
+<td align="center">W/(m²K)</td>
 <td>Conductive internal heat transfer coefficient.</td>
 </tr>
 <tr>
-<td><code>absorptivity</code></td>
+<td><code>absorptivity_surface</code></td>
 <td align="center">-</td>
 <td>Absorptivity factor / irradiation gain coefficient (absorbed irradiation / incident irradiation).</td>
 </tr>
 <tr>
-<td><code>emissivity</code></td>
+<td><code>emissivity_surface</code></td>
 <td align="center">-</td>
 <td>Emissivity factor.</td>
 </tr>
@@ -1436,9 +1401,9 @@
 <td>Unique type identifier.</td>
 </tr>
 <tr>
-<td><code>thermal_resistance_window</code></td>
-<td align="center">m²K/W</td>
-<td>Specific thermal resistance.</td>
+<td><code>heat_transfer_coefficient_conduction_window</code></td>
+<td align="center">W/(m²K)</td>
+<td>Conductive internal heat transfer coefficient.</td>
 </tr>
 <tr>
 <td><code>absorptivity_window</code></td>
