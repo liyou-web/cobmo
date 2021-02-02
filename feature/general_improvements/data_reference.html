@@ -115,8 +115,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#hvac-generic-types"><code class="docutils literal notranslate"><span class="pre">hvac_generic_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hvac-ahu-types"><code class="docutils literal notranslate"><span class="pre">hvac_ahu_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hvac-tu-types"><code class="docutils literal notranslate"><span class="pre">hvac_tu_types</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hvac-vent-types"><code class="docutils literal notranslate"><span class="pre">hvac_vent_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hvac-radiator-types"><code class="docutils literal notranslate"><span class="pre">hvac_radiator_types</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#blind-types"><code class="docutils literal notranslate"><span class="pre">blind_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#constraint-schedules"><code class="docutils literal notranslate"><span class="pre">constraint_schedules</span></code></a></li>
 </ul>
 </li>
@@ -760,22 +760,12 @@
 <tr>
 <td><code>infiltration_rate</code></td>
 <td align="center">1/h</td>
-<td>Infiltration rate.</td>
+<td>Infiltration rate, which is interpreted as ambient air entering the zone.</td>
 </tr>
 <tr>
 <td><code>internal_gain_type</code></td>
 <td align="center"></td>
 <td>Type identifier as defined in <code>internal_gain_types</code>.</td>
-</tr>
-<tr>
-<td><code>window_type</code></td>
-<td align="center"></td>
-<td>Type identifier as defined in <code>window_types</code>.</td>
-</tr>
-<tr>
-<td><code>blind_type</code></td>
-<td align="center"></td>
-<td>Type identifier as defined in <code>blind_types</code>. <em>Currently not used.</em></td>
 </tr>
 <tr>
 <td><code>hvac_generic_type</code></td>
@@ -796,6 +786,11 @@
 <td><code>hvac_tu_type</code></td>
 <td align="center"></td>
 <td>Type identifier as defined in <code>hvac_tu_types</code>.</td>
+</tr>
+<tr>
+<td><code>hvac_vent_type</code></td>
+<td align="center"></td>
+<td>Type identifier as defined in <code>hvac_vent_types</code>.</td>
 </tr>
 <tr>
 <td><code>constraint_type</code></td>
@@ -853,13 +848,18 @@
 </tr>
 <tr>
 <td><code>occupancy_humidity_gain</code></td>
-<td align="center">g/h/person</td>
+<td align="center">g/s/person</td>
 <td>Moisture gain due to occupants. <em>Only required when using <code>humidity_based</code> humidity control in <code>zone_types</code>.</em></td>
 </tr>
 <tr>
 <td><code>appliances_heat_gain</code></td>
 <td align="center">W/m²</td>
 <td>Peak sensible heat gain due to appliances.</td>
+</tr>
+<tr>
+<td><code>warm_water_demand_thermal_power</code></td>
+<td align="center">W/m²</td>
+<td>Peak thermal heating power demand due to warm water demand.</td>
 </tr>
 </tbody>
 </table></div>
@@ -888,12 +888,17 @@
 <tr>
 <td><code>internal_gain_occupancy</code></td>
 <td align="center">-</td>
-<td>Occupancy rate between 0 and 1, where 1 represents peak occupancy.</td>
+<td>Occupancy rate between 0 and 1, where 1 represents peak occupancy. <em>Defaults to 0, if column is not defined.</em></td>
 </tr>
 <tr>
 <td><code>internal_gain_appliances</code></td>
 <td align="center">-</td>
-<td>Appliance activity rate between 0 and 1, where 1 represents peak appliance activity.</td>
+<td>Appliance activity rate between 0 and 1, where 1 represents peak appliance activity. <em>Defaults to 0, if column is not defined.</em></td>
+</tr>
+<tr>
+<td><code>warm_water_demand</code></td>
+<td align="center">-</td>
+<td>Warm water demand rate between 0 and 1, where 1 represents peak demand. <em>Defaults to 0, if column is not defined.</em></td>
 </tr>
 </tbody>
 </table></div>
@@ -922,12 +927,17 @@
 <tr>
 <td><code>internal_gain_occupancy</code></td>
 <td align="center">-</td>
-<td>Occupancy rate between 0 and 1, where 1 represents peak occupancy.</td>
+<td>Occupancy rate between 0 and 1, where 1 represents peak occupancy. <em>Defaults to 0, if column is not defined.</em></td>
 </tr>
 <tr>
 <td><code>internal_gain_appliances</code></td>
 <td align="center">-</td>
-<td>Appliance activity rate between 0 and 1, where 1 represents peak appliance activity.</td>
+<td>Appliance activity rate between 0 and 1, where 1 represents peak appliance activity. <em>Defaults to 0, if column is not defined.</em></td>
+</tr>
+<tr>
+<td><code>warm_water_demand</code></td>
+<td align="center">-</td>
+<td>Warm water demand rate between 0 and 1, where 1 represents peak demand. <em>Defaults to 0, if column is not defined.</em></td>
 </tr>
 </tbody>
 </table></div>
@@ -1053,6 +1063,30 @@
 </tr>
 </tbody>
 </table></div>
+<div class="section" id="hvac-vent-types">
+<h3><code class="docutils literal notranslate"><span class="pre">hvac_vent_types</span></code><a class="headerlink" href="#hvac-vent-types" title="Permalink to this headline">¶</a></h3>
+<p>Controllable air vent unit types. Air vents supply unconditioned ambient air to the zone, where the vent fan and in air volume flow rate is controllable.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Column</th>
+<th align="center">Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hvac_vent_type</code></td>
+<td align="center"></td>
+<td>Unique type identifier.</td>
+</tr>
+<tr>
+<td><code>vent_fan_efficiency</code></td>
+<td align="center">J/kg</td>
+<td>Fan efficiency (electric power / air mass flow rate).</td>
+</tr>
+</tbody>
+</table></div>
 <div class="section" id="hvac-radiator-types">
 <h3><code class="docutils literal notranslate"><span class="pre">hvac_radiator_types</span></code><a class="headerlink" href="#hvac-radiator-types" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
@@ -1131,30 +1165,6 @@
 </tr>
 </tbody>
 </table></div>
-<div class="section" id="blind-types">
-<h3><code class="docutils literal notranslate"><span class="pre">blind_types</span></code><a class="headerlink" href="#blind-types" title="Permalink to this headline">¶</a></h3>
-<p>Window blind characteristics. <em>Currently not used.</em></p>
-<table border="1" class="docutils">
-<thead>
-<tr>
-<th>Column</th>
-<th align="center">Unit</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>blind_type</code></td>
-<td align="center"></td>
-<td>Unique type identifier.</td>
-</tr>
-<tr>
-<td><code>blind_efficiency</code></td>
-<td align="center">-</td>
-<td>Blind efficiency (absorbed irradiation / incident irradiation).</td>
-</tr>
-</tbody>
-</table></div>
 <div class="section" id="constraint-schedules">
 <h3><code class="docutils literal notranslate"><span class="pre">constraint_schedules</span></code><a class="headerlink" href="#constraint-schedules" title="Permalink to this headline">¶</a></h3>
 <p>The constraint timeseries is constructed by obtaining the appropriate value for <code class="docutils literal notranslate"><span class="pre">internal_gain_occupancy</span></code> / <code class="docutils literal notranslate"><span class="pre">internal_gain_appliances</span></code> based on the <code class="docutils literal notranslate"><span class="pre">time_period</span></code> in <code class="docutils literal notranslate"><span class="pre">ddTHH:MM</span></code> format. Intermediate time steps are interpolated linearly. The daily schedule is repeated for any weekday greater than or equal to <code class="docutils literal notranslate"><span class="pre">dd</span></code> until the next defined <code class="docutils literal notranslate"><span class="pre">dd</span></code>. The initial value for each <code class="docutils literal notranslate"><span class="pre">constraint_type</span></code> must start at <code class="docutils literal notranslate"><span class="pre">time_period</span> <span class="pre">=</span> <span class="pre">01T00:00</span></code>.</p>
@@ -1205,7 +1215,7 @@
 <tr>
 <td><code>maximum_co2_concentration</code></td>
 <td align="center">ppm</td>
-<td>Maximum indoor air CO₂ concentration. <em>Only required when using <code>iaq_based</code> fresh air flow control in <code>zone_types</code>.</em></td>
+<td>Maximum indoor air CO₂ concentration, assuming ppm by volume¹. <em>Only required when using <code>iaq_based</code> fresh air flow control in <code>zone_types</code>.</em></td>
 </tr>
 <tr>
 <td><code>minimum_relative_humidity</code></td>
@@ -1218,7 +1228,8 @@
 <td>Maximum indoor air relative humidity. <em>Only required when using <code>humidity_based</code> humidity control in <code>zone_types</code>.</em></td>
 </tr>
 </tbody>
-</table></div>
+</table><p>¹ The units ppm by volume and ppm by mole are identical when assuming ideal gas behavior of CO₂ and air.</p>
+</div>
 </div>
 <div class="section" id="surface-data">
 <h2>Surface data<a class="headerlink" href="#surface-data" title="Permalink to this headline">¶</a></h2>
@@ -1387,17 +1398,17 @@
 <td>Specific heat capacity.</td>
 </tr>
 <tr>
-<td><code>heat_transfer_coefficient_surface_conduction</code></td>
-<td align="center">W/m²K</td>
+<td><code>heat_transfer_coefficient_conduction_surface</code></td>
+<td align="center">W/(m²K)</td>
 <td>Conductive internal heat transfer coefficient.</td>
 </tr>
 <tr>
-<td><code>absorptivity</code></td>
+<td><code>absorptivity_surface</code></td>
 <td align="center">-</td>
 <td>Absorptivity factor / irradiation gain coefficient (absorbed irradiation / incident irradiation).</td>
 </tr>
 <tr>
-<td><code>emissivity</code></td>
+<td><code>emissivity_surface</code></td>
 <td align="center">-</td>
 <td>Emissivity factor.</td>
 </tr>
@@ -1436,9 +1447,9 @@
 <td>Unique type identifier.</td>
 </tr>
 <tr>
-<td><code>thermal_resistance_window</code></td>
-<td align="center">m²K/W</td>
-<td>Specific thermal resistance.</td>
+<td><code>heat_transfer_coefficient_conduction_window</code></td>
+<td align="center">W/(m²K)</td>
+<td>Conductive internal heat transfer coefficient.</td>
 </tr>
 <tr>
 <td><code>absorptivity_window</code></td>
@@ -1504,10 +1515,10 @@
         </dl>
         <dl>
             <dt>Branches</dt>
+            <dd><a href="data_reference.html">feature/general_improvements</a></dd>
             <dd><a href="../../develop/data_reference.html">develop</a></dd>
             <dd><a href="../create_tower_revision/index.html">feature/create_tower_revision</a></dd>
             <dd><a href="../districtcooling/index.html">feature/districtcooling</a></dd>
-            <dd><a href="data_reference.html">feature/general_improvements</a></dd>
             <dd><a href="../primo/index.html">feature/primo</a></dd>
             <dd><a href="../validation/index.html">feature/validation</a></dd>
             <dd><a href="../../master/index.html">master</a></dd>
