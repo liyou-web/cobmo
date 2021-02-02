@@ -115,6 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#hvac-generic-types"><code class="docutils literal notranslate"><span class="pre">hvac_generic_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hvac-ahu-types"><code class="docutils literal notranslate"><span class="pre">hvac_ahu_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hvac-tu-types"><code class="docutils literal notranslate"><span class="pre">hvac_tu_types</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hvac-vent-types"><code class="docutils literal notranslate"><span class="pre">hvac_vent_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hvac-radiator-types"><code class="docutils literal notranslate"><span class="pre">hvac_radiator_types</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#constraint-schedules"><code class="docutils literal notranslate"><span class="pre">constraint_schedules</span></code></a></li>
 </ul>
@@ -759,7 +760,7 @@
 <tr>
 <td><code>infiltration_rate</code></td>
 <td align="center">1/h</td>
-<td>Infiltration rate.</td>
+<td>Infiltration rate, which is interpreted as ambient air entering the zone.</td>
 </tr>
 <tr>
 <td><code>internal_gain_type</code></td>
@@ -785,6 +786,11 @@
 <td><code>hvac_tu_type</code></td>
 <td align="center"></td>
 <td>Type identifier as defined in <code>hvac_tu_types</code>.</td>
+</tr>
+<tr>
+<td><code>hvac_vent_type</code></td>
+<td align="center"></td>
+<td>Type identifier as defined in <code>hvac_vent_types</code>.</td>
 </tr>
 <tr>
 <td><code>constraint_type</code></td>
@@ -842,13 +848,18 @@
 </tr>
 <tr>
 <td><code>occupancy_humidity_gain</code></td>
-<td align="center">g/h/person</td>
+<td align="center">g/s/person</td>
 <td>Moisture gain due to occupants. <em>Only required when using <code>humidity_based</code> humidity control in <code>zone_types</code>.</em></td>
 </tr>
 <tr>
 <td><code>appliances_heat_gain</code></td>
 <td align="center">W/m²</td>
 <td>Peak sensible heat gain due to appliances.</td>
+</tr>
+<tr>
+<td><code>warm_water_demand_thermal_power</code></td>
+<td align="center">W/m²</td>
+<td>Peak thermal heating power demand due to warm water demand.</td>
 </tr>
 </tbody>
 </table></div>
@@ -877,12 +888,17 @@
 <tr>
 <td><code>internal_gain_occupancy</code></td>
 <td align="center">-</td>
-<td>Occupancy rate between 0 and 1, where 1 represents peak occupancy.</td>
+<td>Occupancy rate between 0 and 1, where 1 represents peak occupancy. <em>Defaults to 0, if column is not defined.</em></td>
 </tr>
 <tr>
 <td><code>internal_gain_appliances</code></td>
 <td align="center">-</td>
-<td>Appliance activity rate between 0 and 1, where 1 represents peak appliance activity.</td>
+<td>Appliance activity rate between 0 and 1, where 1 represents peak appliance activity. <em>Defaults to 0, if column is not defined.</em></td>
+</tr>
+<tr>
+<td><code>warm_water_demand</code></td>
+<td align="center">-</td>
+<td>Warm water demand rate between 0 and 1, where 1 represents peak demand. <em>Defaults to 0, if column is not defined.</em></td>
 </tr>
 </tbody>
 </table></div>
@@ -911,12 +927,17 @@
 <tr>
 <td><code>internal_gain_occupancy</code></td>
 <td align="center">-</td>
-<td>Occupancy rate between 0 and 1, where 1 represents peak occupancy.</td>
+<td>Occupancy rate between 0 and 1, where 1 represents peak occupancy. <em>Defaults to 0, if column is not defined.</em></td>
 </tr>
 <tr>
 <td><code>internal_gain_appliances</code></td>
 <td align="center">-</td>
-<td>Appliance activity rate between 0 and 1, where 1 represents peak appliance activity.</td>
+<td>Appliance activity rate between 0 and 1, where 1 represents peak appliance activity. <em>Defaults to 0, if column is not defined.</em></td>
+</tr>
+<tr>
+<td><code>warm_water_demand</code></td>
+<td align="center">-</td>
+<td>Warm water demand rate between 0 and 1, where 1 represents peak demand. <em>Defaults to 0, if column is not defined.</em></td>
 </tr>
 </tbody>
 </table></div>
@@ -1039,6 +1060,30 @@
 <td><code>tu_heating_efficiency</code></td>
 <td align="center">-</td>
 <td>Cooling efficiency, to consider losses in the TU. This is not the efficiency of the chiller plant, which is instead defined in <code>plant_cooling_types</code>.</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="hvac-vent-types">
+<h3><code class="docutils literal notranslate"><span class="pre">hvac_vent_types</span></code><a class="headerlink" href="#hvac-vent-types" title="Permalink to this headline">¶</a></h3>
+<p>Controllable air vent unit types. Air vents supply unconditioned ambient air to the zone, where the vent fan and in air volume flow rate is controllable.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Column</th>
+<th align="center">Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hvac_vent_type</code></td>
+<td align="center"></td>
+<td>Unique type identifier.</td>
+</tr>
+<tr>
+<td><code>vent_fan_efficiency</code></td>
+<td align="center">J/kg</td>
+<td>Fan efficiency (electric power / air mass flow rate).</td>
 </tr>
 </tbody>
 </table></div>
@@ -1170,7 +1215,7 @@
 <tr>
 <td><code>maximum_co2_concentration</code></td>
 <td align="center">ppm</td>
-<td>Maximum indoor air CO₂ concentration. <em>Only required when using <code>iaq_based</code> fresh air flow control in <code>zone_types</code>.</em></td>
+<td>Maximum indoor air CO₂ concentration, assuming ppm by volume¹. <em>Only required when using <code>iaq_based</code> fresh air flow control in <code>zone_types</code>.</em></td>
 </tr>
 <tr>
 <td><code>minimum_relative_humidity</code></td>
@@ -1183,7 +1228,8 @@
 <td>Maximum indoor air relative humidity. <em>Only required when using <code>humidity_based</code> humidity control in <code>zone_types</code>.</em></td>
 </tr>
 </tbody>
-</table></div>
+</table><p>¹ The units ppm by volume and ppm by mole are identical when assuming ideal gas behavior of CO₂ and air.</p>
+</div>
 </div>
 <div class="section" id="surface-data">
 <h2>Surface data<a class="headerlink" href="#surface-data" title="Permalink to this headline">¶</a></h2>
@@ -1469,10 +1515,10 @@
         </dl>
         <dl>
             <dt>Branches</dt>
-            <dd><a href="../feature/general_improvements/data_reference.html">feature/general_improvements</a></dd>
             <dd><a href="data_reference.html">develop</a></dd>
             <dd><a href="../feature/create_tower_revision/index.html">feature/create_tower_revision</a></dd>
             <dd><a href="../feature/districtcooling/index.html">feature/districtcooling</a></dd>
+            <dd><a href="../feature/general_improvements/data_reference.html">feature/general_improvements</a></dd>
             <dd><a href="../feature/primo/index.html">feature/primo</a></dd>
             <dd><a href="../feature/validation/index.html">feature/validation</a></dd>
             <dd><a href="../master/index.html">master</a></dd>
