@@ -177,12 +177,12 @@
 <p>Building model class definition.</p>
 <dl class="py class">
 <dt id="cobmo.building.Building">
-<em class="property">class </em><code class="sig-prename descclassname">cobmo.building.</code><code class="sig-name descname">Building</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">scenario_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cobmo.building.</span></code><code class="sig-name descname"><span class="pre">Building</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scenario_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Building model object.</p>
 <dl class="py method">
 <dt id="cobmo.building.Building.parse_parameter">
-<code class="sig-name descname">parse_parameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parameter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.parse_parameter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">parse_parameter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.parse_parameter" title="Permalink to this definition">¶</a></dt>
 <dd><ul class="simple">
 <li>Checks if given parameter is a number.</li>
 <li>If the parameter is not a number, it is assumed to be the name of a parameter from <cite>building_parameters</cite></li>
@@ -191,25 +191,25 @@
 
 <dl class="py method">
 <dt id="cobmo.building.Building.define_heat_transfer_surfaces_exterior">
-<code class="sig-name descname">define_heat_transfer_surfaces_exterior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_exterior" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">define_heat_transfer_surfaces_exterior</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_exterior" title="Permalink to this definition">¶</a></dt>
 <dd><p>Thermal model: Exterior surfaces</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="cobmo.building.Building.define_heat_transfer_surfaces_interior">
-<code class="sig-name descname">define_heat_transfer_surfaces_interior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_interior" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">define_heat_transfer_surfaces_interior</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_interior" title="Permalink to this definition">¶</a></dt>
 <dd><p>Thermal model: Interior surfaces</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="cobmo.building.Building.define_heat_transfer_surfaces_adiabatic">
-<code class="sig-name descname">define_heat_transfer_surfaces_adiabatic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_adiabatic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">define_heat_transfer_surfaces_adiabatic</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_heat_transfer_surfaces_adiabatic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Thermal model: Adiabatic surfaces</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="cobmo.building.Building.define_output_constraint_timeseries">
-<code class="sig-name descname">define_output_constraint_timeseries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_constraint_timeseries" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">define_output_constraint_timeseries</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_output_constraint_timeseries" title="Permalink to this definition">¶</a></dt>
 <dd><ul class="simple">
 <li>Generate minimum/maximum constraint timeseries based on <cite>building_zone_constraint_profiles</cite>.</li>
 </ul>
@@ -217,7 +217,7 @@
 
 <dl class="py method">
 <dt id="cobmo.building.Building.discretize_model">
-<code class="sig-name descname">discretize_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.discretize_model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">discretize_model</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.discretize_model" title="Permalink to this definition">¶</a></dt>
 <dd><ul class="simple">
 <li>Discretization assuming zero order hold</li>
 <li>Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Discretization#Discretization_of_linear_state_space_models">https://en.wikipedia.org/wiki/Discretization#Discretization_of_linear_state_space_models</a></li>
@@ -226,7 +226,7 @@
 
 <dl class="py method">
 <dt id="cobmo.building.Building.define_augmented_model">
-<code class="sig-name descname">define_augmented_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_augmented_model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">define_augmented_model</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.define_augmented_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Define augmented state space model matrices.</p>
 <ul class="simple">
 <li>Based on Oldewurtel 2011: <a class="reference external" href="https://doi.org/10.3929/ethz-a-007157625%0A">https://doi.org/10.3929/ethz-a-007157625%0A</a></li>
@@ -239,7 +239,7 @@
 
 <dl class="py method">
 <dt id="cobmo.building.Building.simulate">
-<code class="sig-name descname">simulate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">state_initial</span></em>, <em class="sig-param"><span class="n">control_timeseries</span></em>, <em class="sig-param"><span class="n">disturbance_timeseries</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.simulate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">simulate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_initial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_timeseries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disturbance_timeseries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.building.Building.simulate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simulate building model with given initial state and control timeseries.</p>
 <ul class="simple">
 <li>Time horizon is derived from scenario definition in database.</li>
@@ -260,12 +260,12 @@
 <p>Controller class definition.</p>
 <dl class="py class">
 <dt id="cobmo.controller.Controller">
-<em class="property">class </em><code class="sig-prename descclassname">cobmo.controller.</code><code class="sig-name descname">Controller</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">building</span></em>, <em class="sig-param"><span class="n">problem_type</span><span class="o">=</span><span class="default_value">'operation'</span></em>, <em class="sig-param"><span class="n">output_timeseries_reference</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_reduction_start_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_reduction_end_time</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">price_sensitivity_factor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">price_sensitivity_timestep</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.controller.Controller" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cobmo.controller.</span></code><code class="sig-name descname"><span class="pre">Controller</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">building</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'operation'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_timeseries_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_reduction_start_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_reduction_end_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">price_sensitivity_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">price_sensitivity_timestep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.controller.Controller" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Controller object to store the model predictive control problem.</p>
 <dl class="py method">
 <dt id="cobmo.controller.Controller.solve">
-<code class="sig-name descname">solve</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.controller.Controller.solve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">solve</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.controller.Controller.solve" title="Permalink to this definition">¶</a></dt>
 <dd><p>Invoke solver on Pyomo problem.</p>
 </dd></dl>
 
@@ -277,13 +277,13 @@
 <p>Database interface function definitions.</p>
 <dl class="py function">
 <dt id="cobmo.database_interface.create_database">
-<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">create_database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sqlite_path</span></em>, <em class="sig-param"><span class="n">sql_path</span></em>, <em class="sig-param"><span class="n">csv_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.create_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.database_interface.</span></code><code class="sig-name descname"><span class="pre">create_database</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sqlite_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sql_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">csv_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.create_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create SQLITE database from SQL schema file and CSV files.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="cobmo.database_interface.connect_database">
-<code class="sig-prename descclassname">cobmo.database_interface.</code><code class="sig-name descname">connect_database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_path</span><span class="o">=</span><span class="default_value">'/tmp/tmp9xzmcmzz/f65ee6b9dd8a778c6f43683c232ba33074db1cb2/data'</span></em>, <em class="sig-param"><span class="n">overwrite_database</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.connect_database" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.database_interface.</span></code><code class="sig-name descname"><span class="pre">connect_database</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/tmp/tmp4ourc8x9/f65ee6b9dd8a778c6f43683c232ba33074db1cb2/data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite_database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.database_interface.connect_database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Connect to the database at given <cite>data_path</cite> and return connection handle.</p>
 </dd></dl>
 
@@ -293,13 +293,13 @@
 <p>Plot function definitions.</p>
 <dl class="py function">
 <dt id="cobmo.plots.plot_battery_cases_comparisons_bubbles">
-<code class="sig-prename descclassname">cobmo.plots.</code><code class="sig-name descname">plot_battery_cases_comparisons_bubbles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">read_path</span></em>, <em class="sig-param"><span class="n">results_path</span></em>, <em class="sig-param"><span class="n">plot_type</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.plots.plot_battery_cases_comparisons_bubbles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.plots.</span></code><code class="sig-name descname"><span class="pre">plot_battery_cases_comparisons_bubbles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">read_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.plots.plot_battery_cases_comparisons_bubbles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot various battery case comparisons.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="cobmo.plots.plot_battery_cases_payback_comparison_lines">
-<code class="sig-prename descclassname">cobmo.plots.</code><code class="sig-name descname">plot_battery_cases_payback_comparison_lines</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">read_path</span></em>, <em class="sig-param"><span class="n">results_path</span></em>, <em class="sig-param"><span class="n">plot_type</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.plots.plot_battery_cases_payback_comparison_lines" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.plots.</span></code><code class="sig-name descname"><span class="pre">plot_battery_cases_payback_comparison_lines</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">read_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.plots.plot_battery_cases_payback_comparison_lines" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot battery cases payback time comparison.</p>
 </dd></dl>
 
@@ -309,7 +309,7 @@
 <p>Utility function definitions.</p>
 <dl class="py function">
 <dt id="cobmo.utils.calculate_irradiation_surfaces">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_irradiation_surfaces</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">weather_type</span><span class="o">=</span><span class="default_value">'singapore_nus'</span></em>, <em class="sig-param"><span class="n">irradiation_model</span><span class="o">=</span><span class="default_value">'dirint'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_irradiation_surfaces" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.utils.</span></code><code class="sig-name descname"><span class="pre">calculate_irradiation_surfaces</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weather_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'singapore_nus'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irradiation_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dirint'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_irradiation_surfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates irradiation for surfaces oriented towards east, south, west &amp; north.</p>
 <ul class="simple">
 <li>Operates on the database: Updates according columns in <cite>weather_timeseries</cite>.</li>
@@ -320,7 +320,7 @@
 
 <dl class="py function">
 <dt id="cobmo.utils.calculate_sky_temperature">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_sky_temperature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">conn</span></em>, <em class="sig-param"><span class="n">weather_type</span><span class="o">=</span><span class="default_value">'singapore_nus'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_sky_temperature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.utils.</span></code><code class="sig-name descname"><span class="pre">calculate_sky_temperature</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weather_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'singapore_nus'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_sky_temperature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates sky temperatures from ambient air temperature for tropical weather.</p>
 <ul class="simple">
 <li>Ambient air temperature is decreased by 11K to get the sky temperature.</li>
@@ -330,7 +330,7 @@
 
 <dl class="py function">
 <dt id="cobmo.utils.calculate_error">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_error</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">expected_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">predicted_timeseries</span><span class="o">=</span><span class="default_value">pandas.DataFrame</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_error" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.utils.</span></code><code class="sig-name descname"><span class="pre">calculate_error</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expected_timeseries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">pandas.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicted_timeseries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">pandas.DataFrame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the error between expected and predicted timeseries dataframes.</p>
 <ul class="simple">
 <li>Note: This function doesn’t check if the data format is valid.</li>
@@ -339,19 +339,19 @@
 
 <dl class="py function">
 <dt id="cobmo.utils.calculate_tank_diameter_height">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_tank_diameter_height</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">volume</span></em>, <em class="sig-param"><span class="n">aspect_ratio</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_tank_diameter_height" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.utils.</span></code><code class="sig-name descname"><span class="pre">calculate_tank_diameter_height</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aspect_ratio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_tank_diameter_height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates diameter and height of storage tank based on volume and aspect ratio.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="cobmo.utils.get_battery_parameters">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">get_battery_parameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">battery_parameters_path</span><span class="o">=</span><span class="default_value">'/tmp/tmp9xzmcmzz/f65ee6b9dd8a778c6f43683c232ba33074db1cb2/data/storage_data/battery_storage_parameters.csv'</span></em>, <em class="sig-param"><span class="n">cost_conversion_factor</span><span class="o">=</span><span class="default_value">1.37</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.utils.</span></code><code class="sig-name descname"><span class="pre">get_battery_parameters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">battery_parameters_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/tmp/tmp4ourc8x9/f65ee6b9dd8a778c6f43683c232ba33074db1cb2/data/storage_data/battery_storage_parameters.csv'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cost_conversion_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.37</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.get_battery_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load battery parameters from CSV, apply <cite>cost_conversion_factor</cite> to cost columns and return as dataframe.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt id="cobmo.utils.calculate_discounted_payback_time">
-<code class="sig-prename descclassname">cobmo.utils.</code><code class="sig-name descname">calculate_discounted_payback_time</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lifetime</span></em>, <em class="sig-param"><span class="n">investment_cost</span></em>, <em class="sig-param"><span class="n">operation_cost</span></em>, <em class="sig-param"><span class="n">operation_cost_baseline</span></em>, <em class="sig-param"><span class="n">interest_rate</span><span class="o">=</span><span class="default_value">0.06</span></em>, <em class="sig-param"><span class="n">investment_type</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">save_plots</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">results_path</span><span class="o">=</span><span class="default_value">'/tmp/tmp9xzmcmzz/f65ee6b9dd8a778c6f43683c232ba33074db1cb2/results'</span></em>, <em class="sig-param"><span class="n">file_id</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">cobmo.utils.</span></code><code class="sig-name descname"><span class="pre">calculate_discounted_payback_time</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lifetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">investment_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation_cost_baseline</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interest_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">investment_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_plots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/tmp/tmp4ourc8x9/f65ee6b9dd8a778c6f43683c232ba33074db1cb2/results'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cobmo.utils.calculate_discounted_payback_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate simple / discounted payback time in years.</p>
 </dd></dl>
 
